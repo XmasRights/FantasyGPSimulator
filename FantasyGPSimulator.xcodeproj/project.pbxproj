@@ -23,6 +23,7 @@
 		4BEBEBA3205DC222008DC665 /* FGPScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA2205DC222008DC665 /* FGPScore.swift */; };
 		4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA4205DC346008DC665 /* ResultType.swift */; };
 		4BEBEBA8205DCDA1008DC665 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA7205DCDA1008DC665 /* EnumCollection.swift */; };
+		4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		4BEBEBA2205DC222008DC665 /* FGPScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGPScore.swift; sourceTree = "<group>"; };
 		4BEBEBA4205DC346008DC665 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		4BEBEBA7205DCDA1008DC665 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
+		4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				4BEBEBA7205DCDA1008DC665 /* EnumCollection.swift */,
+				4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */,
 				4B1AB013205DA8F300E50C37 /* ViewController.swift in Sources */,
 				4BEBEBA8205DCDA1008DC665 /* EnumCollection.swift in Sources */,
+				4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */,
 				4B1AB011205DA8F300E50C37 /* AppDelegate.swift in Sources */,
 				4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */,
 				4B1AB037205DAB2200E50C37 /* Race.swift in Sources */,
