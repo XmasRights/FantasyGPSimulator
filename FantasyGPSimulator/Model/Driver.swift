@@ -11,23 +11,23 @@ import Foundation
 enum Driver: String
 {
     case Hamilton
-    case Vettel
     case Bottas
+    case Vettel
+    case Raikkonen
     case Ricciardo
     case Verstappen
-    case Raikkonen
-    case Massa
-    case Stroll
     case Ocon
     case Perez
+    case Stroll
+    case Sirotkin
     case Grosjean
     case Magnussen
     case Hulkenberg
+    case Sainz
     case Alonso
     case Vandoorne
     case Ericsson
-    case Sainz
+    case Leclerc
     case Gasly
     case Hartley
-    case Sirotkin
 }
