@@ -13,6 +13,10 @@
 		4B1AB018205DA8F300E50C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1AB017205DA8F300E50C37 /* Assets.xcassets */; };
 		4B1AB01B205DA8F300E50C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B1AB019205DA8F300E50C37 /* LaunchScreen.storyboard */; };
 		4B1AB026205DA8F300E50C37 /* FantasyGPSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB025205DA8F300E50C37 /* FantasyGPSimulatorTests.swift */; };
+		4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB031205DAAB600E50C37 /* Driver.swift */; };
+		4B1AB034205DAAEC00E50C37 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB033205DAAEC00E50C37 /* Constructor.swift */; };
+		4B1AB037205DAB2200E50C37 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB036205DAB2200E50C37 /* Race.swift */; };
+		4B1AB039205DABD100E50C37 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB038205DABD100E50C37 /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		4B1AB021205DA8F300E50C37 /* FantasyGPSimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasyGPSimulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1AB025205DA8F300E50C37 /* FantasyGPSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyGPSimulatorTests.swift; sourceTree = "<group>"; };
 		4B1AB027205DA8F300E50C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B1AB031205DAAB600E50C37 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		4B1AB033205DAAEC00E50C37 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
+		4B1AB036205DAB2200E50C37 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		4B1AB038205DABD100E50C37 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,8 @@
 		4B1AB00F205DA8F300E50C37 /* FantasyGPSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				4B1AB035205DAB1A00E50C37 /* Race */,
+				4B1AB030205DAA9800E50C37 /* Model */,
 				4B1AB010205DA8F300E50C37 /* AppDelegate.swift */,
 				4B1AB012205DA8F300E50C37 /* ViewController.swift */,
 				4B1AB014205DA8F300E50C37 /* Main.storyboard */,
@@ -94,6 +104,24 @@
 				4B1AB027205DA8F300E50C37 /* Info.plist */,
 			);
 			path = FantasyGPSimulatorTests;
+			sourceTree = "<group>";
+		};
+		4B1AB030205DAA9800E50C37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B1AB031205DAAB600E50C37 /* Driver.swift */,
+				4B1AB033205DAAEC00E50C37 /* Constructor.swift */,
+				4B1AB038205DABD100E50C37 /* Team.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B1AB035205DAB1A00E50C37 /* Race */ = {
+			isa = PBXGroup;
+			children = (
+				4B1AB036205DAB2200E50C37 /* Race.swift */,
+			);
+			path = Race;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1AB039205DABD100E50C37 /* Team.swift in Sources */,
+				4B1AB034205DAAEC00E50C37 /* Constructor.swift in Sources */,
+				4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */,
 				4B1AB013205DA8F300E50C37 /* ViewController.swift in Sources */,
 				4B1AB011205DA8F300E50C37 /* AppDelegate.swift in Sources */,
+				4B1AB037205DAB2200E50C37 /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
