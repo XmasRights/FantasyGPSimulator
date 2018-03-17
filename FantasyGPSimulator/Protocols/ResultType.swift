@@ -12,12 +12,11 @@ enum Position
 {
     case DNS
     case DNF
-    case Finish(Int)
+    case Position(Int)
 }
 
 protocol ResultType
 {
     func qualifyingPosition(for driver: Driver) -> Position
-    func startPosition(for driver: Driver) -> Position
     func finishingPosition(for driver: Driver) -> Position
 }

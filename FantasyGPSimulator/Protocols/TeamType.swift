@@ -12,4 +12,6 @@ protocol TeamType
 {
     func team(of driver: Driver) -> Constructor
     func teammate(of driver: Driver) -> Driver
+    
+    func drivers(in constructor: Constructor) -> Set<Driver>
 }
