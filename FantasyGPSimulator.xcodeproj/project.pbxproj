@@ -20,6 +20,8 @@
 		4BEBEB9C205DC00B008DC665 /* PriceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9B205DC00B008DC665 /* PriceType.swift */; };
 		4BEBEB9E205DC01A008DC665 /* TeamType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9D205DC01A008DC665 /* TeamType.swift */; };
 		4BEBEBA0205DC048008DC665 /* ScoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9F205DC048008DC665 /* ScoreType.swift */; };
+		4BEBEBA3205DC222008DC665 /* FGPScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA2205DC222008DC665 /* FGPScore.swift */; };
+		4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA4205DC346008DC665 /* ResultType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		4BEBEB9B205DC00B008DC665 /* PriceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceType.swift; sourceTree = "<group>"; };
 		4BEBEB9D205DC01A008DC665 /* TeamType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamType.swift; sourceTree = "<group>"; };
 		4BEBEB9F205DC048008DC665 /* ScoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreType.swift; sourceTree = "<group>"; };
+		4BEBEBA2205DC222008DC665 /* FGPScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGPScore.swift; sourceTree = "<group>"; };
+		4BEBEBA4205DC346008DC665 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			children = (
 				4BEBEB99205DBF2E008DC665 /* Protocols */,
 				4B1AB035205DAB1A00E50C37 /* Race */,
+				4BEBEBA1205DC1DC008DC665 /* Scoring */,
 				4B1AB030205DAA9800E50C37 /* Model */,
 				4B1AB010205DA8F300E50C37 /* AppDelegate.swift */,
 				4B1AB012205DA8F300E50C37 /* ViewController.swift */,
@@ -137,8 +142,17 @@
 				4BEBEB9B205DC00B008DC665 /* PriceType.swift */,
 				4BEBEB9D205DC01A008DC665 /* TeamType.swift */,
 				4BEBEB9F205DC048008DC665 /* ScoreType.swift */,
+				4BEBEBA4205DC346008DC665 /* ResultType.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4BEBEBA1205DC1DC008DC665 /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				4BEBEBA2205DC222008DC665 /* FGPScore.swift */,
+			);
+			path = Scoring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BEBEBA3205DC222008DC665 /* FGPScore.swift in Sources */,
 				4BEBEB9C205DC00B008DC665 /* PriceType.swift in Sources */,
 				4B1AB039205DABD100E50C37 /* Selection.swift in Sources */,
 				4BEBEB9E205DC01A008DC665 /* TeamType.swift in Sources */,
@@ -252,6 +267,7 @@
 				4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */,
 				4B1AB013205DA8F300E50C37 /* ViewController.swift in Sources */,
 				4B1AB011205DA8F300E50C37 /* AppDelegate.swift in Sources */,
+				4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */,
 				4B1AB037205DAB2200E50C37 /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

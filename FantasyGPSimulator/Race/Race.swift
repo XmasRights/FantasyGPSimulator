@@ -10,7 +10,6 @@ import Foundation
 
 protocol Race
 {
-    var teams:  TeamType  { get }
     var prices: PriceType { get }
     var scores: ScoreType { get }
 }
