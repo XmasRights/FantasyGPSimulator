@@ -24,6 +24,8 @@
 		4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA4205DC346008DC665 /* ResultType.swift */; };
 		4BEBEBA8205DCDA1008DC665 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA7205DCDA1008DC665 /* EnumCollection.swift */; };
 		4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */; };
+		4BEBEBAC205DD947008DC665 /* RaceDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */; };
+		4BEBEBAE205DD98F008DC665 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBAD205DD98F008DC665 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		4BEBEBA4205DC346008DC665 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		4BEBEBA7205DCDA1008DC665 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataLoader.swift; sourceTree = "<group>"; };
+		4BEBEBAD205DD98F008DC665 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				4B1AB031205DAAB600E50C37 /* Driver.swift */,
 				4B1AB033205DAAEC00E50C37 /* Constructor.swift */,
 				4B1AB038205DABD100E50C37 /* Selection.swift */,
+				4BEBEBAD205DD98F008DC665 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				4B1AB036205DAB2200E50C37 /* Race.swift */,
+				4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */,
 			);
 			path = Race;
 			sourceTree = "<group>";
@@ -279,8 +285,10 @@
 				4BEBEBA0205DC048008DC665 /* ScoreType.swift in Sources */,
 				4B1AB034205DAAEC00E50C37 /* Constructor.swift in Sources */,
 				4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */,
+				4BEBEBAE205DD98F008DC665 /* Location.swift in Sources */,
 				4B1AB013205DA8F300E50C37 /* ViewController.swift in Sources */,
 				4BEBEBA8205DCDA1008DC665 /* EnumCollection.swift in Sources */,
+				4BEBEBAC205DD947008DC665 /* RaceDataLoader.swift in Sources */,
 				4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */,
 				4B1AB011205DA8F300E50C37 /* AppDelegate.swift in Sources */,
 				4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */,

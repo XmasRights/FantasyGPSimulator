@@ -8,8 +8,14 @@
 
 import Foundation
 
-protocol Race
+struct Race
 {
-    var prices: PriceType { get }
-    var scores: ScoreType { get }
+    let prices: PriceType
+    let scores: ScoreType
+    
+    init(loader: RaceDataLoader, location: Location)
+    {
+        self.prices = loader.priceData(for: location)
+        self.scores = loader.scoreData(for: location)
+    }
 }
