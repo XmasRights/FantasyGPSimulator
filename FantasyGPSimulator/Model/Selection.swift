@@ -1,5 +1,5 @@
 //
-//  Race.swift
+//  Selection.swift
 //  FantasyGPSimulator
 //
 //  Created by Christopher Fonseka on 17/03/2018.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol Race
+struct Selection
 {
-    var teams:  TeamType  { get }
-    var prices: PriceType { get }
-    var scores: ScoreType { get }
+    let drivers: Set<Driver>
+    let constructors: Set<Constructor>
 }
+

@@ -1,5 +1,5 @@
 //
-//  Race.swift
+//  PriceType.swift
 //  FantasyGPSimulator
 //
 //  Created by Christopher Fonseka on 17/03/2018.
@@ -8,9 +8,10 @@
 
 import Foundation
 
-protocol Race
+typealias Price = Double
+
+protocol PriceType
 {
-    var teams:  TeamType  { get }
-    var prices: PriceType { get }
-    var scores: ScoreType { get }
+    func price(of driver: Driver) -> Price
+    func price(of constructor: Constructor) -> Price
 }

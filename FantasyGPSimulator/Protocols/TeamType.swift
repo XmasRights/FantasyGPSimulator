@@ -1,5 +1,5 @@
 //
-//  Team.swift
+//  TeamType.swift
 //  FantasyGPSimulator
 //
 //  Created by Christopher Fonseka on 17/03/2018.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct Team
+protocol TeamType
 {
-    let drivers: Set<Driver>
-    let constructor: Set<Constructor>
+    func team(of driver: Driver) -> Constructor
+    func teammate(of driver: Driver) -> Driver
 }
-
