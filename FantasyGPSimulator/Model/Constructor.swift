@@ -22,3 +22,10 @@ enum Constructor: String, EnumCollection
     case Haas
 }
 
+extension Constructor: CustomStringConvertible
+{
+    var description: String
+    {
+        return self.rawValue
+    }
+}

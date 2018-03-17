@@ -31,3 +31,11 @@ enum Driver: String, EnumCollection
     case Gasly
     case Hartley
 }
+
+extension Driver: CustomStringConvertible
+{
+    var description: String
+    {
+        return self.rawValue
+    }
+}
