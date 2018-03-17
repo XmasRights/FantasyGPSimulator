@@ -31,10 +31,7 @@ extension Selection: CustomStringConvertible
 {
     var description: String
     {
-        let dri = drivers     .reduce("", { $0 + "\($1), " })
-        let con = constructors.reduce("", { $0 + "\($1), " })
-        
-        return "{ \(dri) \(con) }"
+        return "{ \(Array(drivers)) \(Array(constructors)) }"
     }
 }
 
