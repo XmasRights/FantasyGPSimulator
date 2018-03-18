@@ -15,14 +15,25 @@ class ViewController: UIViewController {
 
         guard let loader = PlistRaceDataLoader(location: .Australia) else { preconditionFailure() }
         let race = Race(loader: loader)
-        
+    
+    
         let selections = Selection.selections
         {
             let price = race.prices.price(of: $0)
-            return 72 < price && price <= 75
+            let score = race.scores!.score(for: $0)
+            return 70 < price && price <= 75 && score > 120
         }
     
-        selections.forEach { print($0) }
+        let details = selections.map
+        {   selection -> (price: Price, score: Score, team: Selection) in
+            
+            return (race.prices.price(of: selection),
+                    race.scores!.score(for: selection),
+                    selection)
+        }
+        
+        details.sorted(by: { $0.score < $1.score }).forEach { print($0) }
+    
     }
 
     override func didReceiveMemoryWarning() {
