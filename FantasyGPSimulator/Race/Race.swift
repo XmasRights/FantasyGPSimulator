@@ -11,11 +11,11 @@ import Foundation
 struct Race
 {
     let prices: PriceType
-    let scores: ScoreType
+    let scores: ScoreType?
     
-    init(loader: RaceDataLoader, location: Location)
+    init(loader: RaceDataLoader)
     {
-        self.prices = loader.priceData(for: location)
-        self.scores = loader.scoreData(for: location)
+        self.prices = loader.priceData
+        self.scores = loader.scoreData
     }
 }

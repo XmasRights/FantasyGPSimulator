@@ -26,6 +26,8 @@
 		4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */; };
 		4BEBEBAC205DD947008DC665 /* RaceDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */; };
 		4BEBEBAE205DD98F008DC665 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBAD205DD98F008DC665 /* Location.swift */; };
+		4BEBEBB1205DDE8B008DC665 /* Australia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB0205DDE8B008DC665 /* Australia.plist */; };
+		4BEBEBB4205DE5E4008DC665 /* RawRaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB3205DE5E4008DC665 /* RawRaceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataLoader.swift; sourceTree = "<group>"; };
 		4BEBEBAD205DD98F008DC665 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4BEBEBB0205DDE8B008DC665 /* Australia.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Australia.plist; sourceTree = "<group>"; };
+		4BEBEBB3205DE5E4008DC665 /* RawRaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawRaceData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		4B1AB004205DA8F300E50C37 = {
 			isa = PBXGroup;
 			children = (
+				4BEBEBAF205DDE75008DC665 /* Data */,
 				4B1AB00F205DA8F300E50C37 /* FantasyGPSimulator */,
 				4B1AB024205DA8F300E50C37 /* FantasyGPSimulatorTests */,
 				4B1AB00E205DA8F300E50C37 /* Products */,
@@ -103,11 +108,12 @@
 		4B1AB00F205DA8F300E50C37 /* FantasyGPSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				4B1AB030205DAA9800E50C37 /* Model */,
 				4BEBEBA6205DCD76008DC665 /* Extensions */,
-				4BEBEB99205DBF2E008DC665 /* Protocols */,
+				4BEBEB99205DBF2E008DC665 /* Data Types */,
+				4BEBEBB2205DE5C9008DC665 /* PlistDataLoader */,
 				4B1AB035205DAB1A00E50C37 /* Race */,
 				4BEBEBA1205DC1DC008DC665 /* Scoring */,
-				4B1AB030205DAA9800E50C37 /* Model */,
 				4B1AB010205DA8F300E50C37 /* AppDelegate.swift */,
 				4B1AB012205DA8F300E50C37 /* ViewController.swift */,
 				4B1AB014205DA8F300E50C37 /* Main.storyboard */,
@@ -147,7 +153,7 @@
 			path = Race;
 			sourceTree = "<group>";
 		};
-		4BEBEB99205DBF2E008DC665 /* Protocols */ = {
+		4BEBEB99205DBF2E008DC665 /* Data Types */ = {
 			isa = PBXGroup;
 			children = (
 				4BEBEB9B205DC00B008DC665 /* PriceType.swift */,
@@ -155,7 +161,7 @@
 				4BEBEB9F205DC048008DC665 /* ScoreType.swift */,
 				4BEBEBA4205DC346008DC665 /* ResultType.swift */,
 			);
-			path = Protocols;
+			path = "Data Types";
 			sourceTree = "<group>";
 		};
 		4BEBEBA1205DC1DC008DC665 /* Scoring */ = {
@@ -173,6 +179,22 @@
 				4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4BEBEBAF205DDE75008DC665 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4BEBEBB0205DDE8B008DC665 /* Australia.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4BEBEBB2205DE5C9008DC665 /* PlistDataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				4BEBEBB3205DE5E4008DC665 /* RawRaceData.swift */,
+			);
+			path = PlistDataLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,7 @@
 				4B1AB01B205DA8F300E50C37 /* LaunchScreen.storyboard in Resources */,
 				4B1AB018205DA8F300E50C37 /* Assets.xcassets in Resources */,
 				4B1AB016205DA8F300E50C37 /* Main.storyboard in Resources */,
+				4BEBEBB1205DDE8B008DC665 /* Australia.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +315,7 @@
 				4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */,
 				4B1AB011205DA8F300E50C37 /* AppDelegate.swift in Sources */,
 				4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */,
+				4BEBEBB4205DE5E4008DC665 /* RawRaceData.swift in Sources */,
 				4B1AB037205DAB2200E50C37 /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

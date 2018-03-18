@@ -10,6 +10,6 @@ import Foundation
 
 protocol RaceDataLoader
 {
-    func priceData(for location: Location) -> PriceType
-    func scoreData(for location: Location) -> ScoreType
+    var priceData: PriceType  { get }
+    var scoreData: ScoreType? { get }
 }
