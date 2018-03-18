@@ -31,6 +31,7 @@
 		4BEBEBB6205DED72008DC665 /* PlistPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB5205DED72008DC665 /* PlistPrice.swift */; };
 		4BEBEBB8205DEE69008DC665 /* PlistScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB7205DEE69008DC665 /* PlistScore.swift */; };
 		4BEBEBBA205DEEF8008DC665 /* PlistTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */; };
+		4BEBEBBC205E03BE008DC665 /* PlistResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBBB205E03BE008DC665 /* PlistResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		4BEBEBB5205DED72008DC665 /* PlistPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistPrice.swift; sourceTree = "<group>"; };
 		4BEBEBB7205DEE69008DC665 /* PlistScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistScore.swift; sourceTree = "<group>"; };
 		4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistTeam.swift; sourceTree = "<group>"; };
+		4BEBEBBB205E03BE008DC665 /* PlistResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				4BEBEBB5205DED72008DC665 /* PlistPrice.swift */,
 				4BEBEBB7205DEE69008DC665 /* PlistScore.swift */,
 				4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */,
+				4BEBEBBB205E03BE008DC665 /* PlistResult.swift */,
 			);
 			path = PlistDataLoader;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */,
 				4BEBEBAE205DD98F008DC665 /* Location.swift in Sources */,
 				4B1AB013205DA8F300E50C37 /* ViewController.swift in Sources */,
+				4BEBEBBC205E03BE008DC665 /* PlistResult.swift in Sources */,
 				4BEBEBA8205DCDA1008DC665 /* EnumCollection.swift in Sources */,
 				4BEBEBAC205DD947008DC665 /* RaceDataLoader.swift in Sources */,
 				4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */,

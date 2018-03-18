@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let race = Race(loader: loader)
         print(race.prices.price(of: Driver.Ricciardo))
         
-        
+        print(race.scores?.score(for: Driver.Ricciardo))
     }
 
     override func didReceiveMemoryWarning() {

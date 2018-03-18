@@ -47,8 +47,8 @@ extension FGPScore
         
         switch finish
         {
-            case .DNS: return 0
-            case .DNF: return 0
+            case .DNF:
+                return 0
             
             case .Position(let position):
                 guard position <= points.count else { return 0 }
@@ -65,7 +65,7 @@ extension FGPScore
             case .Position(let position):
                 return (position == 1 ? 10 : 0)
             
-            case .DNS, .DNF:
+            case .DNF:
                 return 0
         }
     }

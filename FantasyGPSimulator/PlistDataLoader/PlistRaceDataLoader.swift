@@ -10,8 +10,9 @@ import Foundation
 
 private struct RawRaceData: Codable
 {
-    let teams:  [String : [String]]
-    let prices: [String : [String : String]]
+    let results: [String : [String : String]]
+    let teams:   [String : [String]]
+    let prices:  [String : [String : String]]
 }
 
 struct PlistRaceDataLoader
@@ -43,7 +44,13 @@ extension PlistRaceDataLoader: RaceDataLoader
     
     var scoreData: ScoreType?
     {
-        return nil
+        guard let quali = data.results["qualifying"],
+              let race  = data.results["finish"]
+            else { preconditionFailure() }
+        
+        return PlistScore(teamData: data.teams,
+                          qualiData: quali,
+                          raceData: race)
     }
 }
 

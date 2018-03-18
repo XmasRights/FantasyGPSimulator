@@ -10,9 +10,20 @@ import Foundation
 
 enum Position
 {
-    case DNS
     case DNF
     case Position(Int)
+}
+
+extension Position
+{
+    init(value: Int)
+    {
+        switch value
+        {
+            case 0:  self = .DNF
+            default: self = .Position(value)
+        }
+    }
 }
 
 protocol ResultType
