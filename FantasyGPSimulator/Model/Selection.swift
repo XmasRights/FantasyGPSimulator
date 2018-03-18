@@ -45,6 +45,11 @@ extension Selection
         return Set(product(of: constructors, and: drivers))
     }
     
+    static func selections(using filter: @escaping (Selection) -> Bool) -> Set<Selection>
+    {
+        return allSelections().filter(filter)        
+    }
+    
     private static func product(of constructors: [[Constructor]], and drivers: [[Driver]]) -> [Selection]
     {
         return constructors.map
