@@ -12,6 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let loader = PlistRaceDataLoader(location: .Australia) else { preconditionFailure() }
+        let race = Race(loader: loader)
+        print(race.prices.price(of: Driver.Ricciardo))
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

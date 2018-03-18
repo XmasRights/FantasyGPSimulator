@@ -1,5 +1,5 @@
 //
-//  RawRaceData.swift
+//  PlistRaceDataLoader.swift
 //  FantasyGPSimulator
 //
 //  Created by Christopher Fonseka on 18/03/2018.
@@ -28,7 +28,23 @@ struct PlistRaceDataLoader
         
         self.data = decoded
     }
+}
+
+extension PlistRaceDataLoader: RaceDataLoader
+{
+    var priceData: PriceType
+    {
+        guard let drivers = data.prices["Drivers"],
+              let cars    = data.prices["Cars"]
+            else { preconditionFailure() }
+        
+        return PlistPrice(drivers: drivers, cars: cars)
+    }
     
+    var scoreData: ScoreType?
+    {
+        return nil
+    }
 }
 
 private extension PlistRaceDataLoader

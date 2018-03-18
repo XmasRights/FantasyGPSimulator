@@ -27,7 +27,10 @@
 		4BEBEBAC205DD947008DC665 /* RaceDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */; };
 		4BEBEBAE205DD98F008DC665 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBAD205DD98F008DC665 /* Location.swift */; };
 		4BEBEBB1205DDE8B008DC665 /* Australia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB0205DDE8B008DC665 /* Australia.plist */; };
-		4BEBEBB4205DE5E4008DC665 /* RawRaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB3205DE5E4008DC665 /* RawRaceData.swift */; };
+		4BEBEBB4205DE5E4008DC665 /* PlistRaceDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB3205DE5E4008DC665 /* PlistRaceDataLoader.swift */; };
+		4BEBEBB6205DED72008DC665 /* PlistPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB5205DED72008DC665 /* PlistPrice.swift */; };
+		4BEBEBB8205DEE69008DC665 /* PlistScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB7205DEE69008DC665 /* PlistScore.swift */; };
+		4BEBEBBA205DEEF8008DC665 /* PlistTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +68,10 @@
 		4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataLoader.swift; sourceTree = "<group>"; };
 		4BEBEBAD205DD98F008DC665 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4BEBEBB0205DDE8B008DC665 /* Australia.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Australia.plist; sourceTree = "<group>"; };
-		4BEBEBB3205DE5E4008DC665 /* RawRaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawRaceData.swift; sourceTree = "<group>"; };
+		4BEBEBB3205DE5E4008DC665 /* PlistRaceDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistRaceDataLoader.swift; sourceTree = "<group>"; };
+		4BEBEBB5205DED72008DC665 /* PlistPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistPrice.swift; sourceTree = "<group>"; };
+		4BEBEBB7205DEE69008DC665 /* PlistScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistScore.swift; sourceTree = "<group>"; };
+		4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistTeam.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +198,10 @@
 		4BEBEBB2205DE5C9008DC665 /* PlistDataLoader */ = {
 			isa = PBXGroup;
 			children = (
-				4BEBEBB3205DE5E4008DC665 /* RawRaceData.swift */,
+				4BEBEBB3205DE5E4008DC665 /* PlistRaceDataLoader.swift */,
+				4BEBEBB5205DED72008DC665 /* PlistPrice.swift */,
+				4BEBEBB7205DEE69008DC665 /* PlistScore.swift */,
+				4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */,
 			);
 			path = PlistDataLoader;
 			sourceTree = "<group>";
@@ -304,9 +313,11 @@
 				4BEBEBA3205DC222008DC665 /* FGPScore.swift in Sources */,
 				4BEBEB9C205DC00B008DC665 /* PriceType.swift in Sources */,
 				4B1AB039205DABD100E50C37 /* Selection.swift in Sources */,
+				4BEBEBB6205DED72008DC665 /* PlistPrice.swift in Sources */,
 				4BEBEB9E205DC01A008DC665 /* TeamType.swift in Sources */,
 				4BEBEBA0205DC048008DC665 /* ScoreType.swift in Sources */,
 				4B1AB034205DAAEC00E50C37 /* Constructor.swift in Sources */,
+				4BEBEBB8205DEE69008DC665 /* PlistScore.swift in Sources */,
 				4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */,
 				4BEBEBAE205DD98F008DC665 /* Location.swift in Sources */,
 				4B1AB013205DA8F300E50C37 /* ViewController.swift in Sources */,
@@ -315,7 +326,8 @@
 				4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */,
 				4B1AB011205DA8F300E50C37 /* AppDelegate.swift in Sources */,
 				4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */,
-				4BEBEBB4205DE5E4008DC665 /* RawRaceData.swift in Sources */,
+				4BEBEBBA205DEEF8008DC665 /* PlistTeam.swift in Sources */,
+				4BEBEBB4205DE5E4008DC665 /* PlistRaceDataLoader.swift in Sources */,
 				4B1AB037205DAB2200E50C37 /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
