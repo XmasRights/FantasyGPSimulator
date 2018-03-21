@@ -12,9 +12,6 @@ typealias Score = Int
 
 protocol ScoreType
 {
-    var teams: TeamType { get }
-    var result: ResultType { get }
-    
     func score(for driver: Driver) -> Score
     func score(for constructor: Constructor) -> Score
     func score(for selection: Selection) -> Score
