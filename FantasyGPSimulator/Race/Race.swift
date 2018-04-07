@@ -10,12 +10,25 @@ import Foundation
 
 struct Race
 {
-    let prices: PriceType
+    private let prices: PriceType
     let scores: ScoreType?
     
     init(loader: RaceDataLoader)
     {
         self.prices = loader.priceData
         self.scores = loader.scoreData
+    }
+}
+
+extension Race: PriceType
+{
+    func price(of constructor: Constructor) -> Price
+    {
+        return prices.price(of: constructor)
+    }
+    
+    func price(of driver: Driver) -> Price
+    {
+        return prices.price(of: driver)
     }
 }
