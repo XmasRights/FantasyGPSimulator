@@ -44,6 +44,6 @@ extension PlistTeam: TeamType
         guard let entry = data[constructor.rawValue]
             else { preconditionFailure() }
         
-        return Set(entry.flatMap { Driver(rawValue: $0) })
+        return Set(entry.compactMap { Driver(rawValue: $0) })
     }
 }
