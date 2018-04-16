@@ -17,11 +17,9 @@ class ViewController: UIViewController
         guard let loader = PlistRaceDataLoader(location: .China)
             else { preconditionFailure() }
         let race = Race(loader: loader)
-
-        guard let scores = race.scores else { preconditionFailure() }
         
-        let drivers = scores.leaderboard(for: Driver.allValues)
-        let const   = scores.leaderboard(for: Constructor.allValues)
+        let drivers = race.leaderboard(for: Driver.allValues)
+        let const   = race.leaderboard(for: Constructor.allValues)
         
         print("--- DRIVERS ---")
         drivers.forEach { print("\($0.0) -> \($0.1)") }
@@ -34,7 +32,7 @@ class ViewController: UIViewController
         let selections = Selection.selections
         {
             let price = race.price(of: $0)
-            let score = race.scores!.score(for: $0)
+            let score = race.score(for: $0)
             return 68 < price && price <= 75 && score > 130
         }
 
@@ -42,7 +40,7 @@ class ViewController: UIViewController
         {   selection -> (price: Price, score: Score, team: Selection) in
 
             return (race.price(of: selection),
-                    race.scores!.score(for: selection),
+                    race.score(for: selection),
                     selection)
         }
 

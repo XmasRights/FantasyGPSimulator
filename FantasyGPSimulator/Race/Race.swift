@@ -11,7 +11,7 @@ import Foundation
 struct Race
 {
     private let prices: PriceType
-    let scores: ScoreType?
+    private let scores: ScoreType?
     
     init(loader: RaceDataLoader)
     {
@@ -30,5 +30,18 @@ extension Race: PriceType
     func price(of driver: Driver) -> Price
     {
         return prices.price(of: driver)
+    }
+}
+
+extension Race: ScoreType
+{
+    func score(for driver: Driver) -> Score
+    {
+        return scores?.score(for: driver) ?? 0
+    }
+    
+    func score(for constructor: Constructor) -> Score
+    {
+        return scores?.score(for: constructor) ?? 0
     }
 }
