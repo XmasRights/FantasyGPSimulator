@@ -10,11 +10,22 @@ import Foundation
 
 struct RaceGroup
 {
-    private let races: [Race]
+    private let data: [Location : Race]
     
-    init(loaders: [RaceDataLoader])
+    init(locations: [Location])
     {
-        self.races = loaders.map { Race(loader: $0) }
+        self.data = locations.reduce(into: [:]) { data, loc in
+            guard let loader = PlistRaceDataLoader(location: loc) else { return }
+            data[loc] = Race(loader: loader)
+        }
+    }
+}
+
+private extension RaceGroup
+{
+    var races: [Race]
+    {
+        return Array(data.values)
     }
 }
 
@@ -38,8 +49,18 @@ extension RaceGroup: ScoreType
         return races.reduce(0) { $0 + $1.score(for: constructor) }
     }
     
+    func score(for constructor: Constructor, at race: Location) -> Score
+    {
+        return data[race]?.score(for: constructor) ?? 0
+    }
+    
     func score(for driver: Driver) -> Score
     {
         return races.reduce(0) { $0 + $1.score(for: driver) }
+    }
+    
+    func score(for driver: Driver, at race: Location) -> Score
+    {
+        return data[race]?.score(for: driver) ?? 0
     }
 }

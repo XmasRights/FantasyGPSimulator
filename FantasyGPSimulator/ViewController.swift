@@ -14,38 +14,41 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
-        let locations: [Location] = [.Australia, .Bahrain, .China]
-        let loaders = locations.compactMap { PlistRaceDataLoader(location: $0) }
-        
-        let race = RaceGroup(loaders: loaders)
-        
-        let drivers = race.leaderboard(for: Driver.allValues)
-        let const   = race.leaderboard(for: Constructor.allValues)
-        
+        let locations: [Location] = [.Australia, .Bahrain, .China]//
+        let data = RaceGroup(locations: locations)
+//
+        let drivers = data.leaderboard(for: Driver.allValues)
+        let const   = data.leaderboard(for: Constructor.allValues)
+//
         print("--- DRIVERS ---")
-        drivers.forEach { print("\($0.0) -> \($0.1)") }
+        drivers.forEach { score, driver in print("\(driver) -> \(score) -> \(locations.map { loc in data.score(for: driver, at: loc) })") }
         print("\n")
-        
+
         print("--- CONSTRUCTORS ---")
-        const.forEach { print("\($0.0) -> \($0.1)") }
+        const.forEach { score, con in print("\(con) -> \(score) -> \(locations.map { loc in data.score(for: con, at: loc) })") }
         print("\n")
         
-        let selections = Selection.selections
-        {
-            let price = race.price(of: $0)
-            let score = race.score(for: $0)
-            return 68 < price && price <= 75 && score > 130
-        }
-
-        let details = selections.map
-        {   selection -> (price: Price, score: Score, team: Selection) in
-
-            return (race.price(of: selection),
-                    race.score(for: selection),
-                    selection)
-        }
-
-        details.sorted(by: { $0.score < $1.score }).forEach { print($0) }
+//        let selections = Selection.selections
+//        {
+//            let price = race.price(of: $0)
+//            let score = race.score(for: $0)
+//            return 68 < price
+//                   && price <= 75
+//                   && score > 350
+//                   && $0.constructors.contains(.Mercedes)
+//                   && $0.constructors.contains(.Ferrari)
+//                   && $0.constructors.contains(.RedBull)
+//        }
+//
+//        let details = selections.map
+//        {   selection -> (price: Price, score: Score, team: Selection) in
+//
+//            return (race.price(of: selection),
+//                    race.score(for: selection),
+//                    selection)
+//        }
+//
+//        details.sorted(by: { $0.score < $1.score }).forEach { print($0) }
     
     }
 
