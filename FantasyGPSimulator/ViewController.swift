@@ -16,10 +16,10 @@ class ViewController: UIViewController
         
         let locations: [Location] = [.Australia, .Bahrain, .China]//
         let data = RaceGroup(locations: locations)
-//
+
         let drivers = data.leaderboard(for: Driver.allValues)
         let const   = data.leaderboard(for: Constructor.allValues)
-//
+
         print("--- DRIVERS ---")
         drivers.forEach { score, driver in print("\(driver) -> \(score) -> \(locations.map { loc in data.score(for: driver, at: loc) })") }
         print("\n")
@@ -28,27 +28,33 @@ class ViewController: UIViewController
         const.forEach { score, con in print("\(con) -> \(score) -> \(locations.map { loc in data.score(for: con, at: loc) })") }
         print("\n")
         
-//        let selections = Selection.selections
-//        {
-//            let price = race.price(of: $0)
-//            let score = race.score(for: $0)
-//            return 68 < price
-//                   && price <= 75
-//                   && score > 350
-//                   && $0.constructors.contains(.Mercedes)
-//                   && $0.constructors.contains(.Ferrari)
-//                   && $0.constructors.contains(.RedBull)
-//        }
-//
-//        let details = selections.map
-//        {   selection -> (price: Price, score: Score, team: Selection) in
-//
-//            return (race.price(of: selection),
-//                    race.score(for: selection),
-//                    selection)
-//        }
-//
-//        details.sorted(by: { $0.score < $1.score }).forEach { print($0) }
+        let selections = Selection.selections
+        {   selection in
+            
+            let min = Price(70)
+            let max = Price(75)
+            
+            let minPerRaceScore = 100
+            
+            let price = data.price(of: selection)
+            let inBudget = min < price && price <= max
+            
+            let raceScores = locations.map { data.score(for: selection, at: $0) }
+            let reliableScore = raceScores.filter { $0 < minPerRaceScore }.isEmpty
+            
+            return inBudget && reliableScore
+        }
+
+        let details = selections.map
+        {   selection -> (price: Price, score: Score, team: Selection, breakdown: [Score]) in
+
+            return (data.price(of: selection),
+                    data.score(for: selection),
+                    selection,
+                    locations.map { data.score(for: selection, at: $0) })
+        }
+
+        details.sorted(by: { $0.score < $1.score }).forEach { print($0) }
     
     }
 

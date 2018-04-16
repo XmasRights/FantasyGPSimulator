@@ -63,4 +63,9 @@ extension RaceGroup: ScoreType
     {
         return data[race]?.score(for: driver) ?? 0
     }
+    
+    func score(for selection: Selection, at race: Location) -> Score
+    {
+        return data[race]?.score(for: selection) ?? 0
+    }
 }
