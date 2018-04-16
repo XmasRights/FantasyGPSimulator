@@ -14,7 +14,8 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
 
-        guard let loader = PlistRaceDataLoader(location: .Bahrain) else { preconditionFailure() }
+        guard let loader = PlistRaceDataLoader(location: .China)
+            else { preconditionFailure() }
         let race = Race(loader: loader)
 
         guard let scores = race.scores else { preconditionFailure() }
