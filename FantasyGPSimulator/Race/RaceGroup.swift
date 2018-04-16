@@ -22,12 +22,12 @@ extension RaceGroup: PriceType
 {
     func price(of constructor: Constructor) -> Price
     {
-        return races.reduce(0) { $0 + $1.price(of: constructor) }
+        return races.reduce(0) { max($0, $1.price(of: constructor)) }
     }
     
     func price(of driver: Driver) -> Price
     {
-        return races.reduce(0) { $0 + $1.price(of: driver) }
+        return races.reduce(0) { max($0, $1.price(of: driver)) }
     }
 }
 

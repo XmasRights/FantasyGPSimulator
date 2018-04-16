@@ -13,10 +13,11 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        guard let loader = PlistRaceDataLoader(location: .China)
-            else { preconditionFailure() }
-        let race = Race(loader: loader)
+        
+        let locations: [Location] = [.Australia, .Bahrain, .China]
+        let loaders = locations.compactMap { PlistRaceDataLoader(location: $0) }
+        
+        let race = RaceGroup(loaders: loaders)
         
         let drivers = race.leaderboard(for: Driver.allValues)
         let const   = race.leaderboard(for: Constructor.allValues)
