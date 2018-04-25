@@ -15,11 +15,9 @@
 		4B1AB026205DA8F300E50C37 /* FantasyGPSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB025205DA8F300E50C37 /* FantasyGPSimulatorTests.swift */; };
 		4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB031205DAAB600E50C37 /* Driver.swift */; };
 		4B1AB034205DAAEC00E50C37 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB033205DAAEC00E50C37 /* Constructor.swift */; };
-		4B1AB037205DAB2200E50C37 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB036205DAB2200E50C37 /* Race.swift */; };
 		4B1AB039205DABD100E50C37 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB038205DABD100E50C37 /* Selection.swift */; };
-		4B7EE93E207990320082A52F /* Bahrain.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EE93D207990320082A52F /* Bahrain.plist */; };
-		4BB654F320854CB700C3AB78 /* China.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BB654F220854CB600C3AB78 /* China.plist */; };
-		4BB654F520854F2100C3AB78 /* RaceGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB654F420854F2100C3AB78 /* RaceGroup.swift */; };
+		4B32765E209124C30096B35D /* FantasyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B32765D209124C30096B35D /* FantasyService.swift */; };
+		4B32766020912E4D0096B35D /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4B32765F20912E4D0096B35D /* Data */; };
 		4BEBEB9C205DC00B008DC665 /* PriceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9B205DC00B008DC665 /* PriceType.swift */; };
 		4BEBEB9E205DC01A008DC665 /* TeamType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9D205DC01A008DC665 /* TeamType.swift */; };
 		4BEBEBA0205DC048008DC665 /* ScoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9F205DC048008DC665 /* ScoreType.swift */; };
@@ -27,14 +25,9 @@
 		4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA4205DC346008DC665 /* ResultType.swift */; };
 		4BEBEBA8205DCDA1008DC665 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA7205DCDA1008DC665 /* EnumCollection.swift */; };
 		4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */; };
-		4BEBEBAC205DD947008DC665 /* RaceDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */; };
 		4BEBEBAE205DD98F008DC665 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBAD205DD98F008DC665 /* Location.swift */; };
-		4BEBEBB1205DDE8B008DC665 /* Australia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB0205DDE8B008DC665 /* Australia.plist */; };
-		4BEBEBB4205DE5E4008DC665 /* PlistRaceDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB3205DE5E4008DC665 /* PlistRaceDataLoader.swift */; };
-		4BEBEBB6205DED72008DC665 /* PlistPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB5205DED72008DC665 /* PlistPrice.swift */; };
-		4BEBEBB8205DEE69008DC665 /* PlistScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB7205DEE69008DC665 /* PlistScore.swift */; };
-		4BEBEBBA205DEEF8008DC665 /* PlistTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */; };
-		4BEBEBBC205E03BE008DC665 /* PlistResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBBB205E03BE008DC665 /* PlistResult.swift */; };
+		4BEBEBB4205DE5E4008DC665 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB3205DE5E4008DC665 /* Result.swift */; };
+		4BEBEBB6205DED72008DC665 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEBB5205DED72008DC665 /* Market.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +53,9 @@
 		4B1AB027205DA8F300E50C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B1AB031205DAAB600E50C37 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		4B1AB033205DAAEC00E50C37 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
-		4B1AB036205DAB2200E50C37 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		4B1AB038205DABD100E50C37 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
-		4B7EE93D207990320082A52F /* Bahrain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Bahrain.plist; sourceTree = "<group>"; };
-		4BB654F220854CB600C3AB78 /* China.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = China.plist; sourceTree = "<group>"; };
-		4BB654F420854F2100C3AB78 /* RaceGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceGroup.swift; sourceTree = "<group>"; };
+		4B32765D209124C30096B35D /* FantasyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyService.swift; sourceTree = "<group>"; };
+		4B32765F20912E4D0096B35D /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = SOURCE_ROOT; };
 		4BEBEB9B205DC00B008DC665 /* PriceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceType.swift; sourceTree = "<group>"; };
 		4BEBEB9D205DC01A008DC665 /* TeamType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamType.swift; sourceTree = "<group>"; };
 		4BEBEB9F205DC048008DC665 /* ScoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreType.swift; sourceTree = "<group>"; };
@@ -72,14 +63,9 @@
 		4BEBEBA4205DC346008DC665 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		4BEBEBA7205DCDA1008DC665 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataLoader.swift; sourceTree = "<group>"; };
 		4BEBEBAD205DD98F008DC665 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		4BEBEBB0205DDE8B008DC665 /* Australia.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Australia.plist; sourceTree = "<group>"; };
-		4BEBEBB3205DE5E4008DC665 /* PlistRaceDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistRaceDataLoader.swift; sourceTree = "<group>"; };
-		4BEBEBB5205DED72008DC665 /* PlistPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistPrice.swift; sourceTree = "<group>"; };
-		4BEBEBB7205DEE69008DC665 /* PlistScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistScore.swift; sourceTree = "<group>"; };
-		4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistTeam.swift; sourceTree = "<group>"; };
-		4BEBEBBB205E03BE008DC665 /* PlistResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistResult.swift; sourceTree = "<group>"; };
+		4BEBEBB3205DE5E4008DC665 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4BEBEBB5205DED72008DC665 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +89,6 @@
 		4B1AB004205DA8F300E50C37 = {
 			isa = PBXGroup;
 			children = (
-				4BEBEBAF205DDE75008DC665 /* Data */,
 				4B1AB00F205DA8F300E50C37 /* FantasyGPSimulator */,
 				4B1AB024205DA8F300E50C37 /* FantasyGPSimulatorTests */,
 				4B1AB00E205DA8F300E50C37 /* Products */,
@@ -122,10 +107,10 @@
 		4B1AB00F205DA8F300E50C37 /* FantasyGPSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				4B32765F20912E4D0096B35D /* Data */,
 				4B1AB030205DAA9800E50C37 /* Model */,
 				4BEBEBA6205DCD76008DC665 /* Extensions */,
 				4BEBEB99205DBF2E008DC665 /* Data Types */,
-				4BEBEBB2205DE5C9008DC665 /* PlistDataLoader */,
 				4B1AB035205DAB1A00E50C37 /* Race */,
 				4BEBEBA1205DC1DC008DC665 /* Scoring */,
 				4B1AB010205DA8F300E50C37 /* AppDelegate.swift */,
@@ -154,6 +139,7 @@
 				4B1AB033205DAAEC00E50C37 /* Constructor.swift */,
 				4B1AB038205DABD100E50C37 /* Selection.swift */,
 				4BEBEBAD205DD98F008DC665 /* Location.swift */,
+				4B32765D209124C30096B35D /* FantasyService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,9 +147,8 @@
 		4B1AB035205DAB1A00E50C37 /* Race */ = {
 			isa = PBXGroup;
 			children = (
-				4B1AB036205DAB2200E50C37 /* Race.swift */,
-				4BB654F420854F2100C3AB78 /* RaceGroup.swift */,
-				4BEBEBAB205DD947008DC665 /* RaceDataLoader.swift */,
+				4BEBEBB3205DE5E4008DC665 /* Result.swift */,
+				4BEBEBB5205DED72008DC665 /* Market.swift */,
 			);
 			path = Race;
 			sourceTree = "<group>";
@@ -194,28 +179,6 @@
 				4BEBEBA9205DCE93008DC665 /* Array+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4BEBEBAF205DDE75008DC665 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				4BEBEBB0205DDE8B008DC665 /* Australia.plist */,
-				4B7EE93D207990320082A52F /* Bahrain.plist */,
-				4BB654F220854CB600C3AB78 /* China.plist */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		4BEBEBB2205DE5C9008DC665 /* PlistDataLoader */ = {
-			isa = PBXGroup;
-			children = (
-				4BEBEBB3205DE5E4008DC665 /* PlistRaceDataLoader.swift */,
-				4BEBEBB5205DED72008DC665 /* PlistPrice.swift */,
-				4BEBEBB7205DEE69008DC665 /* PlistScore.swift */,
-				4BEBEBB9205DEEF8008DC665 /* PlistTeam.swift */,
-				4BEBEBBB205E03BE008DC665 /* PlistResult.swift */,
-			);
-			path = PlistDataLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,10 +266,8 @@
 			files = (
 				4B1AB01B205DA8F300E50C37 /* LaunchScreen.storyboard in Resources */,
 				4B1AB018205DA8F300E50C37 /* Assets.xcassets in Resources */,
-				4BB654F320854CB700C3AB78 /* China.plist in Resources */,
+				4B32766020912E4D0096B35D /* Data in Resources */,
 				4B1AB016205DA8F300E50C37 /* Main.storyboard in Resources */,
-				4BEBEBB1205DDE8B008DC665 /* Australia.plist in Resources */,
-				4B7EE93E207990320082A52F /* Bahrain.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,26 +286,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BEBEBA3205DC222008DC665 /* FGPScore.swift in Sources */,
+				4B32765E209124C30096B35D /* FantasyService.swift in Sources */,
 				4BEBEB9C205DC00B008DC665 /* PriceType.swift in Sources */,
 				4B1AB039205DABD100E50C37 /* Selection.swift in Sources */,
-				4BEBEBB6205DED72008DC665 /* PlistPrice.swift in Sources */,
+				4BEBEBB6205DED72008DC665 /* Market.swift in Sources */,
 				4BEBEB9E205DC01A008DC665 /* TeamType.swift in Sources */,
-				4BB654F520854F2100C3AB78 /* RaceGroup.swift in Sources */,
 				4BEBEBA0205DC048008DC665 /* ScoreType.swift in Sources */,
 				4B1AB034205DAAEC00E50C37 /* Constructor.swift in Sources */,
-				4BEBEBB8205DEE69008DC665 /* PlistScore.swift in Sources */,
 				4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */,
 				4BEBEBAE205DD98F008DC665 /* Location.swift in Sources */,
 				4B1AB013205DA8F300E50C37 /* ViewController.swift in Sources */,
-				4BEBEBBC205E03BE008DC665 /* PlistResult.swift in Sources */,
 				4BEBEBA8205DCDA1008DC665 /* EnumCollection.swift in Sources */,
-				4BEBEBAC205DD947008DC665 /* RaceDataLoader.swift in Sources */,
 				4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */,
 				4B1AB011205DA8F300E50C37 /* AppDelegate.swift in Sources */,
 				4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */,
-				4BEBEBBA205DEEF8008DC665 /* PlistTeam.swift in Sources */,
-				4BEBEBB4205DE5E4008DC665 /* PlistRaceDataLoader.swift in Sources */,
-				4B1AB037205DAB2200E50C37 /* Race.swift in Sources */,
+				4BEBEBB4205DE5E4008DC665 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

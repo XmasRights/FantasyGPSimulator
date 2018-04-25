@@ -13,49 +13,52 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        let locations: [Location] = [.Australia, .Bahrain, .China]//
-        let data = RaceGroup(locations: locations)
 
-        let drivers = data.leaderboard(for: Driver.allValues)
-        let const   = data.leaderboard(for: Constructor.allValues)
+        
+        let location: Location = .Australia
+        
+        guard let result = Result(location: location) else { preconditionFailure() }
+
+        let scoring = FGPScore(teamData: result, resultData: result)
+
+        let drivers = scoring.leaderboard(for: Driver.allValues)
+        let const   = scoring.leaderboard(for: Constructor.allValues)
 
         print("--- DRIVERS ---")
-        drivers.forEach { score, driver in print("\(driver) -> \(score) -> \(locations.map { loc in data.score(for: driver, at: loc) })") }
+        drivers.forEach { score, driver in print("\(driver) -> \(score)") }
         print("\n")
 
         print("--- CONSTRUCTORS ---")
-        const.forEach { score, con in print("\(con) -> \(score) -> \(locations.map { loc in data.score(for: con, at: loc) })") }
+        const.forEach { score, con in print("\(con) -> \(score)") }
         print("\n")
         
+        guard let market = Market(location: location, service: .FantasyGP) else { preconditionFailure() }
+
         let selections = Selection.selections
         {   selection in
             
             let min = Price(70)
             let max = Price(75)
             
-            let minPerRaceScore = 100
+            let minPerRaceScore = 120
             
-            let price = data.price(of: selection)
+            let price = market.price(of: selection)
+            let score = scoring.score(for: selection)
+            
             let inBudget = min < price && price <= max
             
-            let raceScores = locations.map { data.score(for: selection, at: $0) }
-            let reliableScore = raceScores.filter { $0 < minPerRaceScore }.isEmpty
-            
-            return inBudget && reliableScore
+            return inBudget && (score > minPerRaceScore)
         }
 
         let details = selections.map
-        {   selection -> (price: Price, score: Score, team: Selection, breakdown: [Score]) in
+        {   selection -> (price: Price, score: Score, team: Selection) in
 
-            return (data.price(of: selection),
-                    data.score(for: selection),
-                    selection,
-                    locations.map { data.score(for: selection, at: $0) })
+            return (market.price(of: selection),
+                    scoring.score(for: selection),
+                    selection)
         }
 
         details.sorted(by: { $0.score < $1.score }).forEach { print($0) }
-    
     }
 
     override func didReceiveMemoryWarning() {

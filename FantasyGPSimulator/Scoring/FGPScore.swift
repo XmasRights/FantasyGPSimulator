@@ -8,17 +8,20 @@
 
 import Foundation
 
-struct FGPScore: ScoreType
+struct FGPScore
 {
-    let teams: TeamType
-    let result: ResultType
+    private let teams: TeamType
+    private let result: ResultType
         
     init(teamData: TeamType, resultData: ResultType)
     {
         self.teams = teamData
         self.result = resultData
     }
-    
+}
+
+extension FGPScore: ScoreType
+{
     func score(for driver: Driver) -> Score
     {
         let scores = [finishingPositionScore,
@@ -37,9 +40,9 @@ struct FGPScore: ScoreType
     }
 }
 
-extension FGPScore
+private extension FGPScore
 {
-    private func finishingPositionScore(for driver: Driver) -> Score
+    func finishingPositionScore(for driver: Driver) -> Score
     {
         let points = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]
         
@@ -56,7 +59,7 @@ extension FGPScore
         }
     }
     
-    private func polePositionScore(for driver: Driver) -> Score
+    func polePositionScore(for driver: Driver) -> Score
     {
         let qualifying = result.qualifyingPosition(for: driver)
         
@@ -70,7 +73,7 @@ extension FGPScore
         }
     }
     
-    private func outqualifyingPoints(for driver: Driver) -> Score
+    func outqualifyingPoints(for driver: Driver) -> Score
     {
         let teammate = teams.teammate(of: driver)
         
@@ -90,7 +93,7 @@ extension FGPScore
         }
     }
     
-    private func gainedPositionScore(for driver: Driver) -> Score
+    func gainedPositionScore(for driver: Driver) -> Score
     {
         let start  = result.qualifyingPosition(for: driver)
         let finish = result.finishingPosition(for: driver)
