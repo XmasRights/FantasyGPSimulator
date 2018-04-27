@@ -34,7 +34,7 @@ class ViewController: UIViewController
         
         guard let market = Market(location: location, service: .FantasyGP) else { preconditionFailure() }
 
-        let selections = Selection.selections
+        let selections = Selection.selectionsIncluding(drivers: 5, constructors: 1)
         {   selection in
             
             let min = Price(70)

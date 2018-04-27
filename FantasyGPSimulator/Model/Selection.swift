@@ -37,17 +37,19 @@ extension Selection: CustomStringConvertible
 
 extension Selection
 {
-    static func allSelections() -> Set<Selection>
+    static func allSelections(drivers: Int, constructors: Int) -> Set<Selection>
     {
-        let constructors = Constructor.allValues.uniquePermutations(filter: { $0.count == 3 })
-        let drivers = Driver.allValues.uniquePermutations(filter: { $0.count == 3 })
+        precondition(drivers >= 0 && constructors >= 0)
+        
+        let constructors = Constructor.allValues.uniquePermutations(filter: { $0.count == constructors })
+        let drivers = Driver.allValues.uniquePermutations(filter: { $0.count == drivers })
         
         return Set(product(of: constructors, and: drivers))
     }
     
-    static func selections(using filter: @escaping (Selection) -> Bool) -> Set<Selection>
+    static func selectionsIncluding(drivers: Int, constructors: Int, using filter: @escaping (Selection) -> Bool) -> Set<Selection>
     {
-        return allSelections().filter(filter)        
+        return allSelections(drivers: drivers, constructors: constructors).filter(filter)
     }
     
     private static func product(of constructors: [[Constructor]], and drivers: [[Driver]]) -> [Selection]
