@@ -11,4 +11,5 @@ import Foundation
 enum FantasyService
 {
     case FantasyGP
+    case Formula1
 }

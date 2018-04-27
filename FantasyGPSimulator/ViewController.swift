@@ -32,13 +32,13 @@ class ViewController: UIViewController
         const.forEach { score, con in print("\(con) -> \(score)") }
         print("\n")
         
-        guard let market = Market(location: location, service: .FantasyGP) else { preconditionFailure() }
+        guard let market = Market(location: location, service: .Formula1) else { preconditionFailure() }
 
         let selections = Selection.selectionsIncluding(drivers: 5, constructors: 1)
         {   selection in
             
             let min = Price(70)
-            let max = Price(75)
+            let max = Price(100)
             
             let minPerRaceScore = 120
             

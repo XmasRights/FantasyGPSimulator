@@ -24,13 +24,6 @@ struct Market
         
         guard let data = Market.data(for: location, service: service) else { return nil }
         
-        do {
-            try decoder.decode(MarketData.self, from: data)
-            
-        } catch {
-            print(error)
-        }
-        
         guard let decoded = try? decoder.decode(MarketData.self, from: data) else { return nil }
         
         self.data = decoded
@@ -62,9 +55,12 @@ private extension Market
         {
             case .FantasyGP:
                 let name = "FGPPrice\(location.rawValue)"
-                print(name)
                 let result = Bundle.main.url(forResource: name, withExtension: "plist", subdirectory: "Data/FGPPrice")
-                print(result)
+                return result
+            
+            case .Formula1:
+                let name = "Australia"
+                let result = Bundle.main.url(forResource: name, withExtension: "plist", subdirectory: "Data/F1Price")
                 return result
         }
     }
@@ -72,13 +68,6 @@ private extension Market
     static func data(for location: Location, service: FantasyService) -> Data?
     {
         guard let url = url(for: location, service: service) else { return nil }
-        
-        do {
-            try Data(contentsOf: url)
-        } catch {
-            print(error)
-        }
-        
         return try? Data(contentsOf: url)
     }
 }
