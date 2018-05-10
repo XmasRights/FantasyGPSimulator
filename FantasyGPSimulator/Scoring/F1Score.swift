@@ -87,7 +87,7 @@ private extension F1Score
     // MARK: Qualifying (General, Driver Only)
     func outqualifyingScore(for driver: Driver) -> Score
     {
-        let teammate = teams.teammate(of: driver)
+        guard let teammate = teams.teammate(of: driver) else { return 0 }
         
         let myPosition    = result.qualifyingPosition(for: driver)
         let theirPosition = result.qualifyingPosition(for: teammate)
@@ -232,7 +232,7 @@ private extension F1Score
     // MARK: Race (General, Driver Only)
     func finishAheadOfTeammateScore(for driver: Driver) -> Score
     {
-        let teammate = teams.teammate(of: driver)
+        guard let teammate = teams.teammate(of: driver) else { preconditionFailure() }
         
         let myPosition    = result.finishingPosition(for: driver)
         let theirPosition = result.finishingPosition(for: teammate)

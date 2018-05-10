@@ -16,7 +16,12 @@ class ViewController: UIViewController
 
         do
         {
-            try Team.team(at: .Australia)
+            let teams = try Team.team(at: .Australia)
+            
+            print(teams.drivers(in: .Ferrari))
+            print(teams.drivers(in: .RedBull))
+            print(teams.drivers(in: .ToroRosso))
+            
         }
         catch
         {

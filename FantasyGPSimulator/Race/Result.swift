@@ -54,40 +54,6 @@ extension Result: ResultType
     }
 }
 
-extension Result: TeamType
-{
-    func team(of driver: Driver) -> Constructor
-    {
-        guard let entry = data.teams.first(where: { $0.value.contains(driver.rawValue) }),
-            let team  = Constructor(rawValue: entry.key)
-            else { preconditionFailure() }
-        
-        return team
-    }
-    
-    func teammate(of driver: Driver) -> Driver
-    {
-        guard let entry = data.teams.first(where: { $0.value.contains(driver.rawValue) })
-            else { preconditionFailure() }
-        
-        let others = entry.value.filter { $0 != driver.rawValue }
-        
-        guard let tmString = others.first,
-            let teammate = Driver(rawValue: tmString)
-            else { preconditionFailure() }
-        
-        return teammate
-    }
-    
-    func drivers(in constructor: Constructor) -> Set<Driver>
-    {
-        guard let entry = data.teams[constructor.rawValue]
-            else { preconditionFailure() }
-        
-        return Set(entry.compactMap { Driver(rawValue: $0) })
-    }
-}
-
 private extension Result
 {
     static func url(for location: Location) -> URL?

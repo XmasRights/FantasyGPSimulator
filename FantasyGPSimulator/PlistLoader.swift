@@ -26,9 +26,13 @@ struct PlistLoader
             else { throw PlistLoaderError.noData }
         
         let decoder = PropertyListDecoder()
-        guard let decoded = try? decoder.decode(T.self, from: data)
-            else { throw PlistLoaderError.couldNotDecode }
         
-        return decoded
+        do {
+            let decoded = try decoder.decode(T.self, from: data)
+            return decoded
+        }
+        catch {
+            throw error
+        }
     }
 }

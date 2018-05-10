@@ -75,7 +75,7 @@ private extension FGPScore
     
     func outqualifyingPoints(for driver: Driver) -> Score
     {
-        let teammate = teams.teammate(of: driver)
+        guard let teammate = teams.teammate(of: driver) else { preconditionFailure() }
         
         let myPosition    = result.qualifyingPosition(for: driver)
         let theirPosition = result.qualifyingPosition(for: teammate)
