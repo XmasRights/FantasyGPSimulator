@@ -19,6 +19,8 @@
 		4B1AB039205DABD100E50C37 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AB038205DABD100E50C37 /* Selection.swift */; };
 		4B32765E209124C30096B35D /* FantasyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B32765D209124C30096B35D /* FantasyService.swift */; };
 		4B32766020912E4D0096B35D /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4B32765F20912E4D0096B35D /* Data */; };
+		4BE8581020955B580060AE3A /* TeamFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8580F20955B580060AE3A /* TeamFactory.swift */; };
+		4BE8581220955C310060AE3A /* PlistLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8581120955C310060AE3A /* PlistLoader.swift */; };
 		4BEBEB9C205DC00B008DC665 /* PriceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9B205DC00B008DC665 /* PriceType.swift */; };
 		4BEBEB9E205DC01A008DC665 /* TeamType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9D205DC01A008DC665 /* TeamType.swift */; };
 		4BEBEBA0205DC048008DC665 /* ScoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBEB9F205DC048008DC665 /* ScoreType.swift */; };
@@ -58,6 +60,8 @@
 		4B1AB038205DABD100E50C37 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		4B32765D209124C30096B35D /* FantasyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyService.swift; sourceTree = "<group>"; };
 		4B32765F20912E4D0096B35D /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = SOURCE_ROOT; };
+		4BE8580F20955B580060AE3A /* TeamFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFactory.swift; sourceTree = "<group>"; };
+		4BE8581120955C310060AE3A /* PlistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistLoader.swift; sourceTree = "<group>"; };
 		4BEBEB9B205DC00B008DC665 /* PriceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceType.swift; sourceTree = "<group>"; };
 		4BEBEB9D205DC01A008DC665 /* TeamType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamType.swift; sourceTree = "<group>"; };
 		4BEBEB9F205DC048008DC665 /* ScoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreType.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				4B1AB030205DAA9800E50C37 /* Model */,
 				4BEBEBA6205DCD76008DC665 /* Extensions */,
 				4BEBEB99205DBF2E008DC665 /* Data Types */,
+				4BE8580E20955B080060AE3A /* Team */,
 				4B1AB035205DAB1A00E50C37 /* Race */,
 				4BEBEBA1205DC1DC008DC665 /* Scoring */,
 				4B1AB010205DA8F300E50C37 /* AppDelegate.swift */,
@@ -121,6 +126,7 @@
 				4B1AB017205DA8F300E50C37 /* Assets.xcassets */,
 				4B1AB019205DA8F300E50C37 /* LaunchScreen.storyboard */,
 				4B1AB01C205DA8F300E50C37 /* Info.plist */,
+				4BE8581120955C310060AE3A /* PlistLoader.swift */,
 			);
 			path = FantasyGPSimulator;
 			sourceTree = "<group>";
@@ -155,11 +161,19 @@
 			path = Race;
 			sourceTree = "<group>";
 		};
+		4BE8580E20955B080060AE3A /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				4BEBEB9D205DC01A008DC665 /* TeamType.swift */,
+				4BE8580F20955B580060AE3A /* TeamFactory.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
 		4BEBEB99205DBF2E008DC665 /* Data Types */ = {
 			isa = PBXGroup;
 			children = (
 				4BEBEB9B205DC00B008DC665 /* PriceType.swift */,
-				4BEBEB9D205DC01A008DC665 /* TeamType.swift */,
 				4BEBEB9F205DC048008DC665 /* ScoreType.swift */,
 				4BEBEBA4205DC346008DC665 /* ResultType.swift */,
 			);
@@ -295,6 +309,7 @@
 				4B1AB039205DABD100E50C37 /* Selection.swift in Sources */,
 				4BEBEBB6205DED72008DC665 /* Market.swift in Sources */,
 				4BEBEB9E205DC01A008DC665 /* TeamType.swift in Sources */,
+				4BE8581020955B580060AE3A /* TeamFactory.swift in Sources */,
 				4BEBEBA0205DC048008DC665 /* ScoreType.swift in Sources */,
 				4B1AB034205DAAEC00E50C37 /* Constructor.swift in Sources */,
 				4B1AB032205DAAB600E50C37 /* Driver.swift in Sources */,
@@ -304,6 +319,7 @@
 				4BEBEBAA205DCE93008DC665 /* Array+Extensions.swift in Sources */,
 				4B1AB011205DA8F300E50C37 /* AppDelegate.swift in Sources */,
 				4BEBEBA5205DC346008DC665 /* ResultType.swift in Sources */,
+				4BE8581220955C310060AE3A /* PlistLoader.swift in Sources */,
 				4BEBEBB4205DE5E4008DC665 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Constructor: String, EnumCollection
+enum Constructor: String, EnumCollection, Codable
 {
     case Mercedes
     case RedBull

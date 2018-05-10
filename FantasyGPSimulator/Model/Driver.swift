@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Driver: String, EnumCollection
+enum Driver: String, EnumCollection, Codable
 {
     case Hamilton
     case Bottas
