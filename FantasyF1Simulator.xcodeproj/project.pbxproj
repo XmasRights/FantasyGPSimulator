@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B2491F320BB911400403CAB /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2491F220BB911400403CAB /* Budget.swift */; };
+		4B2491F720BB91C300403CAB /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2491F620BB91C300403CAB /* Simulator.swift */; };
+		4B2491FA20BB944900403CAB /* ScoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2491F920BB944900403CAB /* ScoreType.swift */; };
+		4B2491FC20BB948100403CAB /* Scoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2491FB20BB948100403CAB /* Scoring.swift */; };
+		4B2491FE20BB949100403CAB /* FGPScoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2491FD20BB949100403CAB /* FGPScoring.swift */; };
+		4B24920020BB94BE00403CAB /* F1Scoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2491FF20BB94BE00403CAB /* F1Scoring.swift */; };
 		4B810DD120B8F1AF00D6A974 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B810DD020B8F1AF00D6A974 /* main.swift */; };
 		4B810DD920B8F21300D6A974 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B810DD820B8F21300D6A974 /* Driver.swift */; };
 		4B810DDC20B8F24000D6A974 /* TeamType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B810DDB20B8F24000D6A974 /* TeamType.swift */; };
@@ -38,6 +44,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B2491F220BB911400403CAB /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		4B2491F620BB91C300403CAB /* Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
+		4B2491F920BB944900403CAB /* ScoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreType.swift; sourceTree = "<group>"; };
+		4B2491FB20BB948100403CAB /* Scoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoring.swift; sourceTree = "<group>"; };
+		4B2491FD20BB949100403CAB /* FGPScoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGPScoring.swift; sourceTree = "<group>"; };
+		4B2491FF20BB94BE00403CAB /* F1Scoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F1Scoring.swift; sourceTree = "<group>"; };
 		4B810DCD20B8F1AF00D6A974 /* FantasyF1Simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FantasyF1Simulator; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B810DD020B8F1AF00D6A974 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4B810DD820B8F21300D6A974 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
@@ -68,6 +80,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B2491F120BB910000403CAB /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				4B2491F220BB911400403CAB /* Budget.swift */,
+				4B2491F620BB91C300403CAB /* Simulator.swift */,
+			);
+			path = Simulator;
+			sourceTree = "<group>";
+		};
+		4B2491F820BB943700403CAB /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				4B2491F920BB944900403CAB /* ScoreType.swift */,
+				4B2491FB20BB948100403CAB /* Scoring.swift */,
+				4B2491FD20BB949100403CAB /* FGPScoring.swift */,
+				4B2491FF20BB94BE00403CAB /* F1Scoring.swift */,
+			);
+			path = Scoring;
+			sourceTree = "<group>";
+		};
 		4B810DC420B8F1AF00D6A974 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +108,8 @@
 				4B810DDA20B8F22D00D6A974 /* Teams */,
 				4B810DE820B8F6C300D6A974 /* Results */,
 				4B810DED20B8F98D00D6A974 /* Market */,
+				4B2491F820BB943700403CAB /* Scoring */,
+				4B2491F120BB910000403CAB /* Simulator */,
 				4B810DCF20B8F1AF00D6A974 /* FantasyF1Simulator */,
 				4B810DCE20B8F1AF00D6A974 /* Products */,
 			);
@@ -208,16 +242,22 @@
 				4B810DDC20B8F24000D6A974 /* TeamType.swift in Sources */,
 				4B810DD120B8F1AF00D6A974 /* main.swift in Sources */,
 				4B810DF520B8FA5A00D6A974 /* Array+Extensions.swift in Sources */,
+				4B24920020BB94BE00403CAB /* F1Scoring.swift in Sources */,
 				4B810DDE20B8F25900D6A974 /* Constructor.swift in Sources */,
 				4B810DE020B8F29900D6A974 /* Team.swift in Sources */,
 				4B810DF920B8FB2A00D6A974 /* FantasyService.swift in Sources */,
 				4B810DEA20B8F6D800D6A974 /* ResultType.swift in Sources */,
 				4B810DE220B8F2B500D6A974 /* Location.swift in Sources */,
+				4B2491FC20BB948100403CAB /* Scoring.swift in Sources */,
 				4B810DEC20B8F71700D6A974 /* Result.swift in Sources */,
+				4B2491FA20BB944900403CAB /* ScoreType.swift in Sources */,
 				4B810DEF20B8F99C00D6A974 /* MarketType.swift in Sources */,
+				4B2491F320BB911400403CAB /* Budget.swift in Sources */,
 				4B810DF320B8F9F800D6A974 /* EnumCollection.swift in Sources */,
 				4B810DE720B8F43C00D6A974 /* File.swift in Sources */,
+				4B2491F720BB91C300403CAB /* Simulator.swift in Sources */,
 				4B810DD920B8F21300D6A974 /* Driver.swift in Sources */,
+				4B2491FE20BB949100403CAB /* FGPScoring.swift in Sources */,
 				4B810DE520B8F31B00D6A974 /* PlistLoader.swift in Sources */,
 				4B810DF720B8FADE00D6A974 /* Market.swift in Sources */,
 			);
