@@ -32,5 +32,20 @@ do
 }
 catch { print(error) }
 
+print("/n-------- Selection Test -------")
+
+do
+{
+    let market = try Market.prices(at: .Australia, using: .FantasyGP)
+    
+    let selections = Selection.selectionsIncluding(using: FantasyService.FantasyGP)
+    {
+        let price = market.price(of: $0)
+        return 60 < price && price < 66
+    }
+    
+    print(selections)
+}
+
 
 

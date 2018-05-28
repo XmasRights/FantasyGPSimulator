@@ -8,6 +8,12 @@
 
 import Foundation
 
+protocol SelectionSpec
+{
+    var driverCount:      Int { get }
+    var constructorCount: Int { get }
+}
+
 struct Selection
 {
     let drivers: Set<Driver>
@@ -37,19 +43,17 @@ extension Selection: CustomStringConvertible
 
 extension Selection
 {
-    static func allSelections(drivers: Int, constructors: Int) -> Set<Selection>
+    static func allSelections(using spec: SelectionSpec) -> Set<Selection>
     {
-        precondition(drivers >= 0 && constructors >= 0)
-        
-        let constructors = Constructor.allValues.uniquePermutations(filter: { $0.count == constructors })
-        let drivers = Driver.allValues.uniquePermutations(filter: { $0.count == drivers })
+        let constructors = Constructor.allValues.uniquePermutations(filter: { $0.count == spec.constructorCount })
+        let drivers      = Driver     .allValues.uniquePermutations(filter: { $0.count == spec.driverCount })
         
         return Set(product(of: constructors, and: drivers))
     }
     
-    static func selectionsIncluding(drivers: Int, constructors: Int, using filter: @escaping (Selection) -> Bool) -> Set<Selection>
+    static func selectionsIncluding(using spec: SelectionSpec, filter: @escaping (Selection) -> Bool) -> Set<Selection>
     {
-        return allSelections(drivers: drivers, constructors: constructors).filter(filter)
+        return allSelections(using: spec).filter(filter)
     }
     
     private static func product(of constructors: [[Constructor]], and drivers: [[Driver]]) -> [Selection]

@@ -13,3 +13,25 @@ enum FantasyService
     case FantasyGP
     case Formula1
 }
+
+extension FantasyService: SelectionSpec
+{
+    var driverCount: Int
+    {
+        switch self
+        {
+            case .FantasyGP: return 3
+            case .Formula1:  return 5
+        }
+    }
+    
+    var constructorCount: Int
+    {
+        switch self
+        {
+            case .FantasyGP: return 3
+            case .Formula1:  return 1
+        }
+    }
+}
+
