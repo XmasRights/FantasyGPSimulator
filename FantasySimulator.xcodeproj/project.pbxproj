@@ -73,6 +73,10 @@
 		4BB958152239C38100513F0F /* AustraliaR.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AustraliaR.plist; sourceTree = "<group>"; };
 		4BB958162239C41800513F0F /* FileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecoder.swift; sourceTree = "<group>"; };
 		4BB958182239C9BF00513F0F /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		4BBC5B8D22518E9B007C366E /* BahrainR.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BahrainR.plist; sourceTree = "<group>"; };
+		4BBC5B8E22518E9B007C366E /* BahrainQ.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BahrainQ.plist; sourceTree = "<group>"; };
+		4BBC5B8F22518EC2007C366E /* Bahrain.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Bahrain.plist; sourceTree = "<group>"; };
+		4BBC5B9022518ED0007C366E /* Bahrain.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Bahrain.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			children = (
 				4B2F82B92237EE5800B4C44A /* AustraliaQ.plist */,
 				4BB958152239C38100513F0F /* AustraliaR.plist */,
+				4BBC5B8E22518E9B007C366E /* BahrainQ.plist */,
+				4BBC5B8D22518E9B007C366E /* BahrainR.plist */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				4B5F0EEC22372D0A0026FD1F /* Australia.plist */,
+				4BBC5B9022518ED0007C366E /* Bahrain.plist */,
 			);
 			path = Drivers;
 			sourceTree = "<group>";
@@ -193,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				4B5F0EEE223737440026FD1F /* Australia.plist */,
+				4BBC5B8F22518EC2007C366E /* Bahrain.plist */,
 			);
 			path = Constructors;
 			sourceTree = "<group>";

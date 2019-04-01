@@ -25,7 +25,7 @@ struct FileDecoder {
 
 private extension FileDecoder {
     
-    static let projectPath = "/Users/christopherfonseka/Code/XmasRights/FantasyGPSimulator/FantasySimulator/"
+    static let projectPath = "/Users/christopherfonseka/Code/FantasyGPSimulator/FantasySimulator/"
     
     static var resultsPath: String {
         return projectPath + "Results/"

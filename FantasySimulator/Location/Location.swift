@@ -10,4 +10,5 @@ import Foundation
 
 enum Location: String {
     case Australia
+    case Bahrain
 }

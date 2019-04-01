@@ -10,20 +10,20 @@ import Foundation
 
 do {
     print("START")
-    let location = Location.Australia
+    let location = Location.Bahrain
     
 //    try Printer.FGPDriverScores(at: location)
 //    print("----------------------------------------")
 //    try Printer.FGPConstructorScores(at: location)
 //    print("----------------------------------------")
 //
-//    try Printer.FGPScoreboard(budget: (70...75),
-//                              minScore: 135,
-//                              location: location)
-    
-    try Printer.FGPF15Scoreboard(budget: (0...75),
-                                 minScore: 80,
-                                 location: location)
+    try Printer.FGPScoreboard(budget: (70...75),
+                              minScore: 150,
+                              location: location)
+//
+//    try Printer.FGPF15Scoreboard(budget: (0...75),
+//                                 minScore: 80,
+//                                 location: location)
     
 //    try Printer.FGPF15Scoreboard(budget: (40...75), minScore: 60, location: location)
     print("✅")

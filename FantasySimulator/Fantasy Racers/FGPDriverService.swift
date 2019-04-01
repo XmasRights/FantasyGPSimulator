@@ -12,7 +12,7 @@ struct FGPDriverService: DriverService {
     
     let drivers: [Driver]
     
-    static let path = "/Users/christopherfonseka/Code/XmasRights/FantasyGPSimulator/FantasySimulator/Fantasy Racers/Drivers/"
+    static let path = "/Users/christopherfonseka/Code/FantasyGPSimulator/FantasySimulator/Fantasy Racers/Drivers/"
     
     init(location: Location) throws {
         let decoder = PropertyListDecoder()

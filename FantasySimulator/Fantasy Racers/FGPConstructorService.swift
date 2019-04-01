@@ -13,7 +13,7 @@ struct FGPConstructorService: ConstructorService {
     var constructors: [Constructor]
     
     // TODO: Move to FileDecoder
-    static private let path = "/Users/christopherfonseka/Code/XmasRights/FantasyGPSimulator/FantasySimulator/Fantasy Racers/Constructors/"
+    static private let path = "/Users/christopherfonseka/Code/FantasyGPSimulator/FantasySimulator/Fantasy Racers/Constructors/"
     
     init(location: Location) throws {
         let decoder = PropertyListDecoder()
