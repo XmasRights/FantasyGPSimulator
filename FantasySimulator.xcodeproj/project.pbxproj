@@ -69,6 +69,10 @@
 		4B5F0EFC22373D7A0026FD1F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4B5F0EFE22373D9C0026FD1F /* ResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultService.swift; sourceTree = "<group>"; };
 		4B5F0F0022373DB50026FD1F /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		4B6102372299D85600525B76 /* Spain.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Spain.plist; sourceTree = "<group>"; };
+		4B6102382299D85600525B76 /* China.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = China.plist; sourceTree = "<group>"; };
+		4B6102392299D85600525B76 /* Azerbaijan.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Azerbaijan.plist; sourceTree = "<group>"; };
+		4B61023A2299D85600525B76 /* Monaco.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Monaco.plist; sourceTree = "<group>"; };
 		4BB958132239BB5500513F0F /* FGPScoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGPScoreService.swift; sourceTree = "<group>"; };
 		4BB958152239C38100513F0F /* AustraliaR.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AustraliaR.plist; sourceTree = "<group>"; };
 		4BB958162239C41800513F0F /* FileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecoder.swift; sourceTree = "<group>"; };
@@ -201,6 +205,10 @@
 			children = (
 				4B5F0EEE223737440026FD1F /* Australia.plist */,
 				4BBC5B8F22518EC2007C366E /* Bahrain.plist */,
+				4B6102382299D85600525B76 /* China.plist */,
+				4B6102392299D85600525B76 /* Azerbaijan.plist */,
+				4B6102372299D85600525B76 /* Spain.plist */,
+				4B61023A2299D85600525B76 /* Monaco.plist */,
 			);
 			path = Constructors;
 			sourceTree = "<group>";
@@ -264,6 +272,7 @@
 				TargetAttributes = {
 					4B5F0EC522371F360026FD1F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -273,6 +282,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4B5F0EBD22371F360026FD1F;
 			productRefGroup = 4B5F0EC722371F360026FD1F /* Products */;
@@ -439,7 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH8455G983;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -449,7 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LH8455G983;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

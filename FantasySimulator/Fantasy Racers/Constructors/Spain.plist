@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>identifier</key>
+		<string>RedBull</string>
+		<key>price</key>
+		<integer>17</integer>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>Mercedes</string>
+		<key>price</key>
+		<integer>23</integer>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>Ferarri</string>
+		<key>price</key>
+		<real>18.5</real>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>Renault</string>
+		<key>price</key>
+		<real>6</real>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>McLaren</string>
+		<key>price</key>
+		<real>7.5</real>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>RacingPoint</string>
+		<key>price</key>
+		<real>8.0</real>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>AlfaRomeo</string>
+		<key>price</key>
+		<integer>8</integer>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>ToroRosso</string>
+		<key>price</key>
+		<real>6.5</real>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>Williams</string>
+		<key>price</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>Haas</string>
+		<key>price</key>
+		<real>4.0</real>
+	</dict>
+</array>
+</plist>
