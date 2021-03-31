@@ -11,38 +11,37 @@ struct Score {
     let race: Race
 
     func score(for constructor: Constructor) -> Int {
-        let raceResult = raceResultPoints(constructor: constructor)
-        let gained     = gainedPositionPoints(constructor: constructor)
-        let fastestLap = fastestLapPoints(constructor: constructor)
-        print("""
-            \(constructor.displayName)
-            Race Result: \(raceResult)
-            Gained: \(gained)
-            Fastest Lap: \(fastestLap)
-            \(raceResult + gained + fastestLap)
-
-            """)
-
-        return raceResult + gained + fastestLap
+        _raceScore(for: constructor)
+        + _bonusScore(for: constructor)
     }
 
     func score(for driver: Driver) -> Int {
-        let raceResult = raceResultPoints(driver: driver)
-        let gained     = gainedPositionPoints(driver: driver)
-        let pole       = polePositionPoints(driver: driver)
-        let beatTM     = beatTeamMatePoints(driver: driver)
-        let fastestLap = fastestLapPoints(driver: driver)
-        print("""
-            \(driver.displayName)
-            Race Result: \(raceResult)
-            Gained: \(gained)
-            Pole: \(pole)
-            Better than TM: \(beatTM)
-            Fastest Lap: \(fastestLap)
-            \(raceResult + gained + pole + beatTM + fastestLap)
+        _raceScore(for: driver)
+        + _bonusScore(for: driver)
+        + _qualiScore(for: driver)
+    }
 
-            """)
-        return raceResult + gained + pole + beatTM + fastestLap
+    func _raceScore(for driver: Driver) -> Int {
+        raceResultPoints(driver: driver)
+        + fastestLapPoints(driver: driver)
+    }
+
+    func _bonusScore(for driver: Driver) -> Int {
+        gainedPositionPoints(driver: driver)
+    }
+
+    func _qualiScore(for driver: Driver) -> Int {
+        polePositionPoints(driver: driver)
+        + beatTeamMatePoints(driver: driver)
+    }
+
+    func _raceScore(for constructor: Constructor) -> Int {
+        raceResultPoints(constructor: constructor)
+            + fastestLapPoints(constructor: constructor)
+    }
+
+    func _bonusScore(for constructor: Constructor) -> Int {
+        gainedPositionPoints(constructor: constructor)
     }
 }
 
