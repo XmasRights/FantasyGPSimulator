@@ -22,6 +22,7 @@ struct Bahrain: Race {
             case .sainz:      return .p(8)
             case .alonso:     return .p(9)
             case .stroll:     return .p(10)
+            case .pérez:      return .p(11)
             case .giovinazzi: return .p(12)
             case .tsunoda:    return .p(13)
             case .räikkönen:  return .p(14)
@@ -31,7 +32,31 @@ struct Bahrain: Race {
             case .vettel:     return .p(18)
             case .schumacher: return .p(19)
             case .mazepin:    return .p(20)
+        }
+    }
+
+    func startingGrid(for driver: Driver) -> RaceResult {
+        switch driver {
+            case .verstappen: return .p(1)
+            case .hamilton:   return .p(2)
+            case .bottas:     return .p(3)
+            case .leclerc:    return .p(4)
+            case .gasly:      return .p(5)
+            case .ricciardo:  return .p(6)
+            case .norris:     return .p(7)
+            case .sainz:      return .p(8)
+            case .alonso:     return .p(9)
+            case .stroll:     return .p(10)
+            case .giovinazzi: return .p(12)
+            case .tsunoda:    return .p(12)
+            case .räikkönen:  return .p(13)
+            case .russell:    return .p(14)
+            case .ocon:       return .p(15)
+            case .latifi:     return .p(17)
+            case .schumacher: return .p(17)
+            case .vettel:     return .p(19)
             case .pérez:      return .p(20)
+            case .mazepin:    return .p(20)
         }
     }
 

@@ -13,16 +13,17 @@ struct Score {
     func score(for constructor: Constructor) -> Int {
         let raceResult = raceResultPoints(constructor: constructor)
         let gained     = gainedPositionPoints(constructor: constructor)
-
+        let fastestLap = fastestLapPoints(constructor: constructor)
         print("""
             \(constructor.displayName)
             Race Result: \(raceResult)
             Gained: \(gained)
-            \(raceResult + gained)
+            Fastest Lap: \(fastestLap)
+            \(raceResult + gained + fastestLap)
 
             """)
 
-        return raceResult + gained
+        return raceResult + gained + fastestLap
     }
 
     func score(for driver: Driver) -> Int {
@@ -48,6 +49,11 @@ struct Score {
 private extension Score {
     func fastestLapPoints(driver: Driver) -> Int {
         race.fastestLap == driver ? 1 : 0
+    }
+
+    func fastestLapPoints(constructor: Constructor) -> Int {
+        let team = race.drivers(for: constructor)
+        return team.map(fastestLapPoints).reduce(0, +)
     }
 
     func raceResultPoints(driver: Driver) -> Int {
@@ -80,7 +86,7 @@ private extension Score {
     }
 
     private func gainedPositionPoints(driver: Driver, gain: Int) -> Int {
-        let start  = race.qualifyingResult(for: driver)
+        let start  = race.startingGrid(for: driver)
         let finish = race.raceResult(for: driver)
 
         switch (start, finish) {

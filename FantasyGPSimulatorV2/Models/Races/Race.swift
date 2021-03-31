@@ -17,6 +17,7 @@ protocol Race {
 
     // Result
     func qualifyingResult(for: Driver) -> RaceResult
+    func startingGrid(for: Driver) -> RaceResult
     func raceResult(for: Driver) -> RaceResult
     var fastestLap: Driver { get }
 
