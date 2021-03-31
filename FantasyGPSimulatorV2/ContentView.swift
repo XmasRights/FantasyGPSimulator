@@ -23,7 +23,7 @@ struct ContentView: View {
 
                 NavigationLink(
                     "Teams",
-                    destination: Text("TODO")
+                    destination: teamList()
                 )
             }
             .navigationTitle("Fantasy GP Simulator")
@@ -38,6 +38,19 @@ struct ContentView: View {
 
         return Scoreboard(info: info)
             .navigationTitle("Drivers")
+    }
+
+    private func teamList() -> some View {
+        let scores = Score(race: Bahrain())
+
+        let factory = TeamFactory(drivers: Driver.allCases, constructors: Constructor.allCases)
+
+        let info = factory.teams.reduce(into: [Team: Int]()) { (dict, team) in
+            dict[team] = scores.score(for: team)
+        }
+
+        return Scoreboard(info: info)
+            .navigationTitle("Teams")
     }
 }
 

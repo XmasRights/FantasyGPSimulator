@@ -10,6 +10,11 @@ import Foundation
 struct Score {
     let race: Race
 
+    func score(for team: Team) -> Int {
+        team.drivers.map(score).reduce(0, +)
+        + team.constructors.map(score).reduce(0, +)
+    }
+
     func score(for constructor: Constructor) -> Int {
         _raceScore(for: constructor)
         + _bonusScore(for: constructor)
