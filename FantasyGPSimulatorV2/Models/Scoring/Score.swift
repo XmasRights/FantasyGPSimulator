@@ -13,6 +13,15 @@ struct Score {
     func score(for constructor: Constructor) -> Int {
         let raceResult = raceResultPoints(constructor: constructor)
         let gained     = gainedPositionPoints(constructor: constructor)
+
+        print("""
+            \(constructor.displayName)
+            Race Result: \(raceResult)
+            Gained: \(gained)
+            \(raceResult + gained)
+
+            """)
+
         return raceResult + gained
     }
 
@@ -21,6 +30,16 @@ struct Score {
         let gained     = gainedPositionPoints(driver: driver)
         let pole       = polePositionPoints(driver: driver)
         let beatTM     = beatTeamMatePoints(driver: driver)
+        // TODO: Fastest Lap
+        print("""
+            \(driver.displayName)
+            Race Result: \(raceResult)
+            Gained: \(gained)
+            Pole: \(pole)
+            Better than TM: \(beatTM)
+            \(raceResult + gained + pole + beatTM)
+
+            """)
         return raceResult + gained + pole + beatTM
     }
 }

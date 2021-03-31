@@ -22,7 +22,6 @@ struct Bahrain: Race {
             case .sainz:      return .p(8)
             case .alonso:     return .p(9)
             case .stroll:     return .p(10)
-            case .pérez:      return .p(11)
             case .giovinazzi: return .p(12)
             case .tsunoda:    return .p(13)
             case .räikkönen:  return .p(14)
@@ -32,6 +31,7 @@ struct Bahrain: Race {
             case .vettel:     return .p(18)
             case .schumacher: return .p(19)
             case .mazepin:    return .p(20)
+            case .pérez:      return .p(20)
         }
     }
 
