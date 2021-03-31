@@ -30,21 +30,26 @@ struct Score {
         let gained     = gainedPositionPoints(driver: driver)
         let pole       = polePositionPoints(driver: driver)
         let beatTM     = beatTeamMatePoints(driver: driver)
-        // TODO: Fastest Lap
+        let fastestLap = fastestLapPoints(driver: driver)
         print("""
             \(driver.displayName)
             Race Result: \(raceResult)
             Gained: \(gained)
             Pole: \(pole)
             Better than TM: \(beatTM)
-            \(raceResult + gained + pole + beatTM)
+            Fastest Lap: \(fastestLap)
+            \(raceResult + gained + pole + beatTM + fastestLap)
 
             """)
-        return raceResult + gained + pole + beatTM
+        return raceResult + gained + pole + beatTM + fastestLap
     }
 }
 
 private extension Score {
+    func fastestLapPoints(driver: Driver) -> Int {
+        race.fastestLap == driver ? 1 : 0
+    }
+
     func raceResultPoints(driver: Driver) -> Int {
         let points = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]
         let finish = race.raceResult(for: driver)

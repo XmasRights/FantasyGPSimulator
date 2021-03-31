@@ -60,6 +60,8 @@ struct Bahrain: Race {
         }
     }
 
+    var fastestLap: Driver { .bottas }
+
     func cost(of driver: Driver) -> Double {
         switch driver {
             case .hamilton:   return 25.5

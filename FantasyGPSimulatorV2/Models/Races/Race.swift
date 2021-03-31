@@ -18,6 +18,7 @@ protocol Race {
     // Result
     func qualifyingResult(for: Driver) -> RaceResult
     func raceResult(for: Driver) -> RaceResult
+    var fastestLap: Driver { get }
 
     // Entries
     func teammate(of: Driver) -> Driver
