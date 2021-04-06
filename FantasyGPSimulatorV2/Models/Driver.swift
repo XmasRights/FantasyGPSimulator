@@ -55,4 +55,29 @@ extension Driver: Displayable {
             case .russell:    return "George Russell"
         }
     }
+
+    var shortName: String {
+        switch self {
+            case .hamilton:   return "HAM"
+            case .bottas:     return "BOT"
+            case .verstappen: return "VER"
+            case .pérez:      return "PER"
+            case .räikkönen:  return "RAI"
+            case .giovinazzi: return "GIO"
+            case .gasly:      return "GAS"
+            case .tsunoda:    return "TSU"
+            case .alonso:     return "ALO"
+            case .ocon:       return "OCO"
+            case .vettel:     return "VET"
+            case .stroll:     return "STR"
+            case .leclerc:    return "LEC"
+            case .sainz:      return "SAI"
+            case .mazepin:    return "MAZ"
+            case .schumacher: return "MSC"
+            case .ricciardo:  return "RIC"
+            case .norris:     return "NOR"
+            case .latifi:     return "LAT"
+            case .russell:    return "RUS"
+        }
+    }
 }

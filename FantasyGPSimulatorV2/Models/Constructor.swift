@@ -35,4 +35,19 @@ extension Constructor: Displayable {
             case .williams:    return "Williams"
         }
     }
+
+    var shortName: String {
+        switch self {
+            case .mercedes:    return "MER"
+            case .redBull:     return "RBR"
+            case .mcLaren:     return "MCL"
+            case .astonMartin: return "ASM"
+            case .ferrari:     return "FER"
+            case .alphaTauri:  return "AT"
+            case .alfaRomeo:   return "AR"
+            case .alpine:      return "ALP"
+            case .haas:        return "HAS"
+            case .williams:    return "WIL"
+        }
+    }
 }
