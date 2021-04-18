@@ -10,7 +10,7 @@ import SwiftUI
 extension RaceView {
     struct Info {
         let race: String
-        // TODO: Teams
+        let teams: [Team: Int]
         let constructors: [Constructor: Int]
         let drivers: [Driver: Int]
     }
@@ -25,6 +25,10 @@ struct RaceView: View {
 
     private var drivers: [Entry] {
         sorted(info.drivers)
+    }
+
+    private var teams: [Entry] {
+        sorted(info.teams)
     }
 
     var body: some View {
@@ -45,6 +49,16 @@ struct RaceView: View {
                         Text(constructor.name)
                         Spacer()
                         Text("\(constructor.score)")
+                    }
+                }
+            }
+
+            Section(header: Text("Teams")) {
+                ForEach(teams) { team in
+                    HStack {
+                        Text(team.name)
+                        Spacer()
+                        Text("\(team.score)")
                     }
                 }
             }
@@ -81,6 +95,9 @@ extension RaceView.Info {
     static var preview: Self {
         .init(
             race: "Fonseka GP",
+            teams: [
+                Team(drivers: Set([.gasly, .tsunoda]), constructors: Set([.redBull])) : 100,
+            ],
             constructors: [
                 .mercedes: 42,
                 .redBull: 32,
@@ -104,8 +121,17 @@ extension RaceView.Info {
             dict[driver] = score.score(for: driver)
         }
 
+        let factory = TeamFactory(
+            drivers: Driver.allCases,
+            constructors: Constructor.allCases)
+
+        let teams = factory.teams(race: race).reduce(into: [Team: Int]()) { (dict, team) in
+            dict[team] = score.score(for: team)
+        }
+
         self.init(
             race: race.name,
+            teams: teams,
             constructors: constructors,
             drivers: drivers
         )

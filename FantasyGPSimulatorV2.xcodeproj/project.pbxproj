@@ -18,13 +18,11 @@
 		4BE31B392613E4CC00B664BC /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B382613E4CC00B664BC /* Score.swift */; };
 		4BE31B412613E80100B664BC /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B402613E80100B664BC /* RaceView.swift */; };
 		4BE31B452613EBBF00B664BC /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B442613EBBF00B664BC /* Displayable.swift */; };
-		4BE31B482613ED1C00B664BC /* RaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B472613ED1C00B664BC /* RaceListView.swift */; };
 		4BE31B5226149BD100B664BC /* FantasyGPSimulatorV2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B5126149BD100B664BC /* FantasyGPSimulatorV2Tests.swift */; };
 		4BE31B5C26149BF300B664BC /* BahrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B5B26149BF300B664BC /* BahrainTests.swift */; };
 		4BE31B612614A73900B664BC /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B602614A73900B664BC /* Team.swift */; };
 		4BE31B662614A94500B664BC /* UniquePermutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B652614A94500B664BC /* UniquePermutations.swift */; };
 		4BE31B6A2614A97600B664BC /* TeamFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B692614A97600B664BC /* TeamFactory.swift */; };
-		4BE31B6E2614AAE100B664BC /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B6D2614AAE100B664BC /* Scoreboard.swift */; };
 		4BF7E103262C83D800A255BA /* EmiliaRomagna.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7E102262C83D800A255BA /* EmiliaRomagna.swift */; };
 		4BF7E107262C83FA00A255BA /* EmiliaRomagnaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7E106262C83FA00A255BA /* EmiliaRomagnaTests.swift */; };
 		4BF7E111262C940600A255BA /* TrackSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7E110262C940600A255BA /* TrackSelectorView.swift */; };
@@ -56,7 +54,6 @@
 		4BE31B382613E4CC00B664BC /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		4BE31B402613E80100B664BC /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		4BE31B442613EBBF00B664BC /* Displayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
-		4BE31B472613ED1C00B664BC /* RaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListView.swift; sourceTree = "<group>"; };
 		4BE31B4F26149BD100B664BC /* FantasyGPSimulatorV2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasyGPSimulatorV2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE31B5126149BD100B664BC /* FantasyGPSimulatorV2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyGPSimulatorV2Tests.swift; sourceTree = "<group>"; };
 		4BE31B5326149BD100B664BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +61,6 @@
 		4BE31B602614A73900B664BC /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		4BE31B652614A94500B664BC /* UniquePermutations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniquePermutations.swift; sourceTree = "<group>"; };
 		4BE31B692614A97600B664BC /* TeamFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFactory.swift; sourceTree = "<group>"; };
-		4BE31B6D2614AAE100B664BC /* Scoreboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoreboard.swift; sourceTree = "<group>"; };
 		4BF7E102262C83D800A255BA /* EmiliaRomagna.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmiliaRomagna.swift; sourceTree = "<group>"; };
 		4BF7E106262C83FA00A255BA /* EmiliaRomagnaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmiliaRomagnaTests.swift; sourceTree = "<group>"; };
 		4BF7E110262C940600A255BA /* TrackSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSelectorView.swift; sourceTree = "<group>"; };
@@ -147,8 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				4BE31B402613E80100B664BC /* RaceView.swift */,
-				4BE31B472613ED1C00B664BC /* RaceListView.swift */,
-				4BE31B6D2614AAE100B664BC /* Scoreboard.swift */,
 				4BF7E110262C940600A255BA /* TrackSelectorView.swift */,
 			);
 			path = Views;
@@ -307,12 +301,10 @@
 				4BF7E115262C972900A255BA /* RaceScore.swift in Sources */,
 				4BE31B662614A94500B664BC /* UniquePermutations.swift in Sources */,
 				4BF7E111262C940600A255BA /* TrackSelectorView.swift in Sources */,
-				4BE31B6E2614AAE100B664BC /* Scoreboard.swift in Sources */,
 				4BE31B162613D58000B664BC /* ContentView.swift in Sources */,
 				4BE31B392613E4CC00B664BC /* Score.swift in Sources */,
 				4BE31B312613DB1700B664BC /* Constructor.swift in Sources */,
 				4BE31B6A2614A97600B664BC /* TeamFactory.swift in Sources */,
-				4BE31B482613ED1C00B664BC /* RaceListView.swift in Sources */,
 				4BE31B142613D58000B664BC /* FantasyGPSimulatorV2App.swift in Sources */,
 				4BE31B342613DDA700B664BC /* Bahrain.swift in Sources */,
 				4BF7E103262C83D800A255BA /* EmiliaRomagna.swift in Sources */,
