@@ -22,4 +22,15 @@ extension Team: Displayable {
             \(c.joined(separator: ","))
             """
     }
+
+    var shortName: String {
+        let d = drivers.map { $0.shortName }.sorted()
+        let c = constructors.map { $0.shortName }.sorted()
+
+        return """
+            \(d.joined(separator: ","))
+            \(c.joined(separator: ","))
+            """
+
+    }
 }

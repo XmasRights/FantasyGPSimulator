@@ -32,7 +32,7 @@ private extension Scoreboard {
         let sorted = dict.sorted(by: { $0.value > $1.value })
         return sorted.map { args -> Entry in
             let (constructor, score) = args
-            return .init(name: constructor.displayName, score: score)
+            return .init(name: constructor.shortName, score: score)
         }
     }
 }
