@@ -29,6 +29,7 @@
 		4BF7E107262C83FA00A255BA /* EmiliaRomagnaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7E106262C83FA00A255BA /* EmiliaRomagnaTests.swift */; };
 		4BF7E111262C940600A255BA /* TrackSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7E110262C940600A255BA /* TrackSelectorView.swift */; };
 		4BF7E115262C972900A255BA /* RaceScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7E114262C972900A255BA /* RaceScore.swift */; };
+		4BF7E119262C975800A255BA /* SeasonScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7E118262C975800A255BA /* SeasonScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		4BF7E106262C83FA00A255BA /* EmiliaRomagnaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmiliaRomagnaTests.swift; sourceTree = "<group>"; };
 		4BF7E110262C940600A255BA /* TrackSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSelectorView.swift; sourceTree = "<group>"; };
 		4BF7E114262C972900A255BA /* RaceScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScore.swift; sourceTree = "<group>"; };
+		4BF7E118262C975800A255BA /* SeasonScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				4BE31B382613E4CC00B664BC /* Score.swift */,
 				4BF7E114262C972900A255BA /* RaceScore.swift */,
+				4BF7E118262C975800A255BA /* SeasonScore.swift */,
 			);
 			path = Scoring;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				4BE31B412613E80100B664BC /* RaceView.swift in Sources */,
 				4BE31B452613EBBF00B664BC /* Displayable.swift in Sources */,
 				4BE31B2E2613DA6F00B664BC /* Race.swift in Sources */,
+				4BF7E119262C975800A255BA /* SeasonScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
