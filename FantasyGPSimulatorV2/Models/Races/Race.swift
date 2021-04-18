@@ -81,4 +81,9 @@ extension Race {
             self.constructor(of: driver) == constructor
         }
     }
+
+    func cost(of team: Team) -> Double {
+        team.drivers.map(cost).reduce(0, +)
+        + team.constructors.map(cost).reduce(0, +)
+    }
 }

@@ -41,11 +41,15 @@ struct ContentView: View {
     }
 
     private func teamList() -> some View {
-        let scores = Score(race: Bahrain())
+        let race = EmiliaRomagna()
+
+        let scores = Score(race: race)
 
         let factory = TeamFactory(drivers: Driver.allCases, constructors: Constructor.allCases)
 
-        let info = factory.teams.reduce(into: [Team: Int]()) { (dict, team) in
+        let teams = factory.teams(race: race)
+
+        let info = teams.reduce(into: [Team: Int]()) { (dict, team) in
             dict[team] = scores.score(for: team)
         }
 

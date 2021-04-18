@@ -8,6 +8,8 @@
 import Foundation
 
 class TeamFactory {
+    let budget = 75.0
+
     init(drivers: [Driver], constructors: [Constructor]) {
         self.drivers = drivers
         self.constructors = constructors
@@ -22,10 +24,9 @@ class TeamFactory {
         return product(c, d)
     }
 
-    // TODO
-//    func teams(budget: ClosedRange<Int>) -> [Team] {
-//        return teams.filter { budget.contains($0.price) }
-//    }
+    func teams(race: Race) -> [Team] {
+        return teams.filter { race.cost(of: $0) <= budget }
+    }
 }
 
 private extension TeamFactory {
