@@ -22,7 +22,7 @@ struct TrackSelectorView: View {
                 ForEach(0..<Races.all.count) { index in
                     NavigationLink(
                         Races.all[index].name,
-                        destination: RaceView(info: .init(race: Races.all[index])))
+                        destination: ListSelectorView(race: Races.all[index]))
                 }
             }
         }
