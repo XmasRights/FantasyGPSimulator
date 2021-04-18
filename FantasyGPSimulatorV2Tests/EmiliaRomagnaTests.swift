@@ -9,13 +9,9 @@ import XCTest
 @testable import FantasyGPSimulatorV2
 
 class EmiliaRomagnaTests: XCTestCase {
-    var score: Score {
-        Score(race: EmiliaRomagna())
-    }
+    private let s = RaceScore(race: EmiliaRomagna())
 
     func testDriverScores() {
-        let s = score
-
         XCTAssertEqual(s.score(for: .alonso), 9)
         XCTAssertEqual(s.score(for: .bottas), 0)
         XCTAssertEqual(s.score(for: .gasly), 9)
@@ -39,8 +35,6 @@ class EmiliaRomagnaTests: XCTestCase {
     }
 
     func testDriverScores_race() {
-        let s = score
-
         XCTAssertEqual(s._raceScore(for: .alonso), 0)
         XCTAssertEqual(s._raceScore(for: .bottas), 0)
         XCTAssertEqual(s._raceScore(for: .gasly), 4)
@@ -64,8 +58,6 @@ class EmiliaRomagnaTests: XCTestCase {
     }
 
     func testDriverScores_bonus() {
-        let s = score
-
         XCTAssertEqual(s._bonusScore(for: .alonso), 9)
         XCTAssertEqual(s._bonusScore(for: .bottas), 0)
         XCTAssertEqual(s._bonusScore(for: .gasly), 0)
@@ -89,8 +81,6 @@ class EmiliaRomagnaTests: XCTestCase {
     }
 
     func testDriverScores_quali() {
-        let s = score
-
         XCTAssertEqual(s._qualiScore(for: .alonso), 0)
         XCTAssertEqual(s._qualiScore(for: .bottas), 0)
         XCTAssertEqual(s._qualiScore(for: .gasly), 5)
@@ -115,8 +105,6 @@ class EmiliaRomagnaTests: XCTestCase {
 
 
     func testConstructorScores() {
-        let s = score
-
         XCTAssertEqual(s.score(for: .alfaRomeo), 10)
         XCTAssertEqual(s.score(for: .alphaTauri), 10)
         XCTAssertEqual(s.score(for: .alpine), 4)
@@ -130,8 +118,6 @@ class EmiliaRomagnaTests: XCTestCase {
     }
 
     func testConstructorScores_race() {
-        let s = score
-
         XCTAssertEqual(s._raceScore(for: .alfaRomeo), 2)
         XCTAssertEqual(s._raceScore(for: .alphaTauri), 4)
         XCTAssertEqual(s._raceScore(for: .alpine), 1)
@@ -145,8 +131,6 @@ class EmiliaRomagnaTests: XCTestCase {
     }
 
     func testConstructorScores_bonus() {
-        let s = score
-
         XCTAssertEqual(s._bonusScore(for: .alfaRomeo), 8)
         XCTAssertEqual(s._bonusScore(for: .alphaTauri), 6)
         XCTAssertEqual(s._bonusScore(for: .alpine), 3)

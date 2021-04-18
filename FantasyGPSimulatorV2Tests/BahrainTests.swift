@@ -9,9 +9,9 @@ import XCTest
 @testable import FantasyGPSimulatorV2
 
 class BahrainTests: XCTestCase {
-    func testDriverScores() {
-        let s = Score(race: Bahrain())
+    private let s = RaceScore(race: Bahrain())
 
+    func testDriverScores() {
         XCTAssertEqual(s.score(for: .verstappen), 33)
         XCTAssertEqual(s.score(for: .pérez), 55)
         XCTAssertEqual(s.score(for: .bottas), 16)
@@ -35,8 +35,6 @@ class BahrainTests: XCTestCase {
     }
 
     func testDriverScores_race() {
-        let s = Score(race: Bahrain())
-
         XCTAssertEqual(s._raceScore(for: .verstappen), 18)
         XCTAssertEqual(s._raceScore(for: .pérez), 10)
         XCTAssertEqual(s._raceScore(for: .bottas), 16)
@@ -60,8 +58,6 @@ class BahrainTests: XCTestCase {
     }
 
     func testDriverScores_bonus() {
-        let s = Score(race: Bahrain())
-
         XCTAssertEqual(s._bonusScore(for: .verstappen), 0)
         XCTAssertEqual(s._bonusScore(for: .pérez), 45)
         XCTAssertEqual(s._bonusScore(for: .bottas), 0)
@@ -85,8 +81,6 @@ class BahrainTests: XCTestCase {
     }
 
     func testDriverScores_quali() {
-        let s = Score(race: Bahrain())
-
         XCTAssertEqual(s._qualiScore(for: .verstappen), 15)
         XCTAssertEqual(s._qualiScore(for: .pérez), 0)
         XCTAssertEqual(s._qualiScore(for: .bottas), 0)
@@ -111,8 +105,6 @@ class BahrainTests: XCTestCase {
 
 
     func testConstructorScores() {
-        let s = Score(race: Bahrain())
-
         XCTAssertEqual(s.score(for: .redBull), 43)
         XCTAssertEqual(s.score(for: .mercedes), 42)
         XCTAssertEqual(s.score(for: .ferrari), 12)
@@ -126,8 +118,6 @@ class BahrainTests: XCTestCase {
     }
 
     func testConstructorScores_race() {
-        let s = Score(race: Bahrain())
-
         XCTAssertEqual(s._raceScore(for: .redBull), 28)
         XCTAssertEqual(s._raceScore(for: .mercedes), 41)
         XCTAssertEqual(s._raceScore(for: .ferrari), 12)
@@ -141,8 +131,6 @@ class BahrainTests: XCTestCase {
     }
 
     func testConstructorScores_bonus() {
-        let s = Score(race: Bahrain())
-
         XCTAssertEqual(s._bonusScore(for: .redBull), 15)
         XCTAssertEqual(s._bonusScore(for: .mercedes), 1)
         XCTAssertEqual(s._bonusScore(for: .ferrari), 0)
