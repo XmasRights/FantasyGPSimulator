@@ -30,7 +30,8 @@ protocol Race {
 
 enum Races {
     static let all: [Race] = [
-        Bahrain()
+        Bahrain(),
+        EmiliaRomagna()
     ]
 }
 
