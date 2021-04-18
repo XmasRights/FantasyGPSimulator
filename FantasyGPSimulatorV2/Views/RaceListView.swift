@@ -20,7 +20,7 @@ struct RaceListView: View {
     }
 
     private func info(for race: Race) -> RaceView.Info {
-        let score = Score(race: race)
+        let score = RaceScore(race: race)
 
         let constructors = Constructor.allCases.reduce(into: [Constructor: Int]()) { (dict, const) in
             dict[const] = score.score(for: const)

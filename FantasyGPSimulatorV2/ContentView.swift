@@ -10,28 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List {
-                NavigationLink(
-                    "Races",
-                    destination: RaceListView()
-                )
-
-                NavigationLink(
-                    "Drivers",
-                    destination: driverList()
-                )
-
-                NavigationLink(
-                    "Teams",
-                    destination: teamList()
-                )
-            }
+            TrackSelectorView()
             .navigationTitle("Fantasy GP Simulator")
         }
     }
 
     private func driverList() -> some View {
-        let scores = Score(race: Bahrain())
+        let scores = RaceScore(race: Bahrain())
         let info = Driver.allCases.reduce(into: [Driver: Int]()) { (dict, driver) in
             dict[driver] = scores.score(for: driver)
         }
@@ -43,7 +28,7 @@ struct ContentView: View {
     private func teamList() -> some View {
         let race = EmiliaRomagna()
 
-        let scores = Score(race: race)
+        let scores = RaceScore(race: race)
 
         let factory = TeamFactory(drivers: Driver.allCases, constructors: Constructor.allCases)
 
