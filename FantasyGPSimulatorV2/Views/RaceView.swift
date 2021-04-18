@@ -49,7 +49,7 @@ struct RaceView: View {
                 }
             }
         }
-        .listStyle(GroupedListStyle())
+        .listStyle(SidebarListStyle())
         .navigationTitle(info.race)
     }
 }
@@ -91,5 +91,23 @@ extension RaceView.Info {
                 .pérez: 18,
                 .bottas: 12
             ])
+    }
+
+    init(race: Race) {
+        let score = RaceScore(race: race)
+
+        let constructors = Constructor.allCases.reduce(into: [Constructor: Int]()) { (dict, const) in
+            dict[const] = score.score(for: const)
+        }
+
+        let drivers = Driver.allCases.reduce(into: [Driver: Int]()) { (dict, driver) in
+            dict[driver] = score.score(for: driver)
+        }
+
+        self.init(
+            race: race.name,
+            constructors: constructors,
+            drivers: drivers
+        )
     }
 }

@@ -14,12 +14,19 @@ struct TrackSelectorView: View {
 
     var body: some View {
         List {
-            Text("All Races")
+            Section {
+                Text("All Races")
+            }
 
-            ForEach(raceNames, id: \.self) {
-                Text($0)
+            Section {
+                ForEach(0..<Races.all.count) { index in
+                    NavigationLink(
+                        Races.all[index].name,
+                        destination: RaceView(info: .init(race: Races.all[index])))
+                }
             }
         }
+        .listStyle(InsetGroupedListStyle())
     }
 }
 
