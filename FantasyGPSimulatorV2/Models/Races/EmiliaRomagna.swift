@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct EmiliaRomagna: Race {
     let name = "Emilia Romagna Grand Prix"
     let info: RaceInfo = _EmiliaRomagnaInfo()

@@ -9,17 +9,19 @@ import Foundation
 
 struct Entry: Identifiable {
     let name: String
-    let score: Int
+    let score: Int?
     let price: Double
 
     var id: String { name }
 
-    var value: Double {
-        Double(score) / price
+    var value: Double? {
+        guard let score = score else { return nil }
+        return Double(score) / price
     }
 
     var scoreString: String {
-        "\(score)"
+        guard let score = score else { return "tbc" }
+        return "\(score)"
     }
 
     var priceString: String {
@@ -30,6 +32,6 @@ struct Entry: Identifiable {
 
 extension Entry: Comparable {
     static func < (lhs: Entry, rhs: Entry) -> Bool {
-        lhs.score < rhs.score
+        (lhs.score ?? -1) < (rhs.score ?? -1)
     }
 }

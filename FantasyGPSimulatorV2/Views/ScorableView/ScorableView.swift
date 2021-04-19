@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScorableView<T: Displayable>: View {
     let items: [T]
-    let score: (T) -> Int
+    let score: ((T) -> Int)?
     let price: (T) -> Double
 
     enum Selection: String, CaseIterable {
@@ -17,7 +17,8 @@ struct ScorableView<T: Displayable>: View {
         case Price
         case Value
     }
-    @State private var selection = Selection.Score
+
+    @State private var selection: Selection = .Price
 
     var body: some View {
         VStack {
@@ -32,13 +33,15 @@ struct ScorableView<T: Displayable>: View {
 
             Spacer()
 
-            Picker("Hello", selection: $selection) {
-                ForEach(Selection.allCases, id: \.self) {
-                    Text($0.rawValue)
+            if score != nil {
+                Picker("Hello", selection: $selection) {
+                    ForEach(Selection.allCases, id: \.self) {
+                        Text($0.rawValue)
+                    }
                 }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
         }
     }
 }
@@ -53,16 +56,16 @@ private extension ScorableView {
     func entry(for item: T) -> Entry {
         Entry(
             name: item.displayName,
-            score: score(item),
+            score: score?(item),
             price: price(item))
     }
 
     var entrySort: (Entry, Entry) -> Bool {
         return { lhs, rhs -> Bool in
             switch selection {
-                case .Score: return lhs.score > rhs.score
+                case .Score: return (lhs.score ?? -1) > (rhs.score ?? -1)
                 case .Price: return lhs.price > rhs.price
-                case .Value: return lhs.value > rhs.value
+                case .Value: return (lhs.value ?? -1) > (rhs.value ?? -1)
             }
         }
     }
@@ -71,9 +74,9 @@ private extension ScorableView {
 private extension Entry {
     func valueString<T: Displayable>(for selection: ScorableView<T>.Selection) -> String {
         switch selection {
-            case .Score: return String(score)
+            case .Score: return String(score ?? -1)
             case .Price: return "$\(price)m"
-            case .Value: return String(format: "%.2f", value)
+            case .Value: return String(format: "%.2f", value ?? -1)
         }
     }
 }
