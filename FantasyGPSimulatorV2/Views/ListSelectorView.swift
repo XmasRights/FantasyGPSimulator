@@ -28,7 +28,12 @@ struct ListSelectorView: View {
             }
 
             Section {
-                Text("Constructor")
+                NavigationLink(
+                    "Constructor",
+                    destination: ScorableView(
+                        items: Constructor.allCases,
+                        score: score.score,
+                        price: race.cost))
             }
 
             Section {
