@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+extension ListSelectorView {
+    static func race(_ race: Race) -> ListSelectorView {
+        .init(race: race, score: RaceScore(race: race))
+    }
+
+    static func  allSeason() -> ListSelectorView {
+        .init(race: Races.all.last!, score: SeasonScore())
+    }
+}
+
 struct ListSelectorView: View {
     let race: Race
     let score: Score
@@ -14,11 +24,6 @@ struct ListSelectorView: View {
     let teamFactory = TeamFactory(
         drivers: Driver.allCases,
         constructors: Constructor.allCases)
-
-    init(race: Race) {
-        self.race = race
-        self.score = RaceScore(race: race)
-    }
 
     var body: some View {
         List {
@@ -56,6 +61,6 @@ struct ListSelectorView: View {
 
 struct ListSelectorView_Previews: PreviewProvider {
     static var previews: some View {
-        ListSelectorView(race: Races.all.first!)
+        ListSelectorView.race(Races.all.first!)
     }
 }

@@ -15,14 +15,17 @@ struct TrackSelectorView: View {
     var body: some View {
         List {
             Section {
-                Text("All Races")
+                NavigationLink(
+                    "All Races",
+                    destination: ListSelectorView.allSeason()
+                )
             }
 
             Section {
                 ForEach(0..<Races.all.count) { index in
                     NavigationLink(
                         Races.all[index].name,
-                        destination: ListSelectorView(race: Races.all[index]))
+                        destination: ListSelectorView.race(Races.all[index]))
                 }
             }
         }
