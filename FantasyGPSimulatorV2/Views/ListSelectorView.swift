@@ -9,16 +9,23 @@ import SwiftUI
 
 extension ListSelectorView {
     static func race(_ race: Race) -> ListSelectorView {
-        .init(race: race, score: RaceScore(race: race))
+        .init(
+            title: race.name,
+            info: race.info,
+            score: RaceScore(race: race))
     }
 
     static func  allSeason() -> ListSelectorView {
-        .init(race: Races.all.last!, score: SeasonScore())
+        .init(
+            title: "F1 2021",
+            info: Races.all.last!.info,
+            score: SeasonScore())
     }
 }
 
 struct ListSelectorView: View {
-    let race: Race
+    let title: String
+    let info: RaceInfo
     let score: Score?
 
     var body: some View {
@@ -29,7 +36,7 @@ struct ListSelectorView: View {
                     destination: ScorableView(
                         items: Driver.allCases,
                         score: score?.score,
-                        price: race.info.cost))
+                        price: info.cost))
             }
 
             Section {
@@ -38,7 +45,7 @@ struct ListSelectorView: View {
                     destination: ScorableView(
                         items: Constructor.allCases,
                         score: score?.score,
-                        price: race.info.cost))
+                        price: info.cost))
             }
 
             if let score = score {
@@ -48,12 +55,12 @@ struct ListSelectorView: View {
                         destination: TeamListView(
                             teams: TeamFactory.shared.teams,
                             score: score.score,
-                            price: race.info.cost))
+                            price: info.cost))
                 }
             }
         }
         .listStyle(InsetGroupedListStyle())
-        .navigationTitle(race.name)
+        .navigationTitle(title)
     }
 }
 

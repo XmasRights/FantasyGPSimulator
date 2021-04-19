@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TeamListView: View {
+    let budget = 77.5
+
     let teams: [Team]
     let score: (Team) -> Int
     let price: (Team) -> Double
@@ -31,7 +33,7 @@ private extension TeamListView {
         let start = DispatchTime.now()
 
         let filtered = teams
-            .filter { price($0) <= 75.0 && score($0) > 140 }
+            .filter { price($0) <= budget && score($0) > 140 }
 
         let makeEntires = filtered.map {
             Entry(
