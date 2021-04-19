@@ -15,6 +15,7 @@ struct ScorableView<T: Displayable>: View {
     enum Selection: String, CaseIterable {
         case Score
         case Price
+        case Value
     }
     @State private var selection = Selection.Score
 
@@ -24,7 +25,7 @@ struct ScorableView<T: Displayable>: View {
                 ForEach(entries) { entry in
                     ScorableCell(
                         name: entry.name,
-                        value: entry.value(for: selection)
+                        value: entry.valueString(for: selection)
                     )
                 }
             }
@@ -61,6 +62,7 @@ private extension ScorableView {
             switch selection {
                 case .Score: return lhs.score > rhs.score
                 case .Price: return lhs.price > rhs.price
+                case .Value: return lhs.value > rhs.value
             }
         }
     }
@@ -73,10 +75,15 @@ private struct Entry: Identifiable {
 
     var id: String { name }
 
-    func value<T: Displayable>(for selection: ScorableView<T>.Selection) -> String {
+    var value: Double {
+        Double(score) / price
+    }
+
+    func valueString<T: Displayable>(for selection: ScorableView<T>.Selection) -> String {
         switch selection {
             case .Score: return String(score)
             case .Price: return "$\(price)m"
+            case .Value: return String(format: "%.2f", value)
         }
     }
 }
