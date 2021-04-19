@@ -21,10 +21,6 @@ struct ListSelectorView: View {
     let race: Race
     let score: Score
 
-    let teamFactory = TeamFactory(
-        drivers: Driver.allCases,
-        constructors: Constructor.allCases)
-
     var body: some View {
         List {
             Section {
@@ -49,7 +45,7 @@ struct ListSelectorView: View {
                 NavigationLink(
                     "Teams ",
                     destination: TeamListView(
-                        teams: teamFactory.teams,
+                        teams: TeamFactory.shared.teams,
                         score: score.score,
                         price: race.cost))
             }

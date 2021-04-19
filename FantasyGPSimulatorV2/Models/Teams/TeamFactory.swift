@@ -8,24 +8,26 @@
 import Foundation
 
 class TeamFactory {
-    let budget = 75.0
-
-    init(drivers: [Driver], constructors: [Constructor]) {
-        self.drivers = drivers
-        self.constructors = constructors
-    }
-
-    let drivers: [Driver]
-    let constructors: [Constructor]
+    static let shared: TeamFactory = .init()
 
     var teams: [Team] {
-        let d = drivers.uniquePermutations(filter: { $0.count == 3 })
-        let c = constructors.uniquePermutations(filter: { $0.count == 3 })
-        return product(c, d)
+        get {
+            if let t = _teams {
+                return t
+            } else {
+                let loaded = generateTeams()
+                _teams = loaded
+                return loaded
+            }
+        }
     }
 
-    func teams(race: Race) -> [Team] {
-        return teams.filter { race.cost(of: $0) <= budget }
+    private var _teams: [Team]?
+
+    private func generateTeams() -> [Team] {
+        let d = Driver.allCases.uniquePermutations(filter: { $0.count == 3 })
+        let c = Constructor.allCases.uniquePermutations(filter: { $0.count == 3 })
+        return product(c, d)
     }
 }
 
