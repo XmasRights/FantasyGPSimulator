@@ -7,18 +7,37 @@
 
 import Foundation
 
-struct RaceScore: Score {
+class RaceScore: Score {
     let race: Race
 
+    var driverCache = [Driver: Int]()
+    var constructorCache = [Constructor: Int]()
+
+    init(race: Race) {
+        self.race = race
+    }
+
     func score(for constructor: Constructor) -> Int {
-        _raceScore(for: constructor)
-            + _bonusScore(for: constructor)
+        if let score = constructorCache[constructor] {
+            return score
+        } else {
+            let score = _raceScore(for: constructor)
+                + _bonusScore(for: constructor)
+            constructorCache[constructor] = score
+            return score
+        }
     }
 
     func score(for driver: Driver) -> Int {
-        _raceScore(for: driver)
-            + _bonusScore(for: driver)
-            + _qualiScore(for: driver)
+        if let score = driverCache[driver] {
+            return score
+        } else {
+            let score = _raceScore(for: driver)
+                + _bonusScore(for: driver)
+                + _qualiScore(for: driver)
+            driverCache[driver] = score
+            return score
+        }
     }
 }
 
