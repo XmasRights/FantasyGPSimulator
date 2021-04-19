@@ -31,7 +31,7 @@ private extension TeamListView {
         let start = DispatchTime.now()
 
         let filtered = teams
-            .filter { price($0) <= 75.0 && score($0) > 130 }
+            .filter { price($0) <= 75.0 && score($0) > 140 }
 
         let makeEntires = filtered.map {
             Entry(
@@ -40,7 +40,7 @@ private extension TeamListView {
                 price: price($0))
         }
 
-        let sorted = makeEntires.sorted()
+        let sorted = makeEntires.sorted().suffix(20)
 
         let end = DispatchTime.now()
 
@@ -53,27 +53,6 @@ private extension TeamListView {
         let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
         let timeInterval = Double(nanoTime) / 1_000_000_000
         return "\(timeInterval) seconds"
-    }
-}
-
-private struct Entry: Identifiable, Comparable {
-    let name: String
-    let score: Int
-    let price: Double
-
-    var id: String { name }
-
-    var scoreString: String {
-        "\(score)"
-    }
-
-    var priceString: String {
-        let p = String(format: "%0.2f", price)
-        return "$\(p)m"
-    }
-
-    static func < (lhs: Entry, rhs: Entry) -> Bool {
-        lhs.score < rhs.score
     }
 }
 

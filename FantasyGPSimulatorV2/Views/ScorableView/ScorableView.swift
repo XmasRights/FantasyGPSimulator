@@ -68,17 +68,7 @@ private extension ScorableView {
     }
 }
 
-private struct Entry: Identifiable {
-    let name: String
-    let score: Int
-    let price: Double
-
-    var id: String { name }
-
-    var value: Double {
-        Double(score) / price
-    }
-
+private extension Entry {
     func valueString<T: Displayable>(for selection: ScorableView<T>.Selection) -> String {
         switch selection {
             case .Score: return String(score)
