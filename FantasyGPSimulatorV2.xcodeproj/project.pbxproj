@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BD78244262CF8F5005BAE17 /* ScorableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD78243262CF8F5005BAE17 /* ScorableCell.swift */; };
+		4BD78248262DA89A005BAE17 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD78247262DA89A005BAE17 /* TeamListView.swift */; };
 		4BE31B142613D58000B664BC /* FantasyGPSimulatorV2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B132613D58000B664BC /* FantasyGPSimulatorV2App.swift */; };
 		4BE31B162613D58000B664BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE31B152613D58000B664BC /* ContentView.swift */; };
 		4BE31B182613D58200B664BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE31B172613D58200B664BC /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		4BD78243262CF8F5005BAE17 /* ScorableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorableCell.swift; sourceTree = "<group>"; };
+		4BD78247262DA89A005BAE17 /* TeamListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
 		4BE31B102613D58000B664BC /* FantasyGPSimulatorV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyGPSimulatorV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE31B132613D58000B664BC /* FantasyGPSimulatorV2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyGPSimulatorV2App.swift; sourceTree = "<group>"; };
 		4BE31B152613D58000B664BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				4BE31B402613E80100B664BC /* RaceView.swift */,
 				4BF7E110262C940600A255BA /* TrackSelectorView.swift */,
 				4BF7E128262CF50500A255BA /* ListSelectorView.swift */,
+				4BD78247262DA89A005BAE17 /* TeamListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				4BF7E115262C972900A255BA /* RaceScore.swift in Sources */,
 				4BE31B662614A94500B664BC /* UniquePermutations.swift in Sources */,
 				4BF7E111262C940600A255BA /* TrackSelectorView.swift in Sources */,
+				4BD78248262DA89A005BAE17 /* TeamListView.swift in Sources */,
 				4BE31B162613D58000B664BC /* ContentView.swift in Sources */,
 				4BE31B392613E4CC00B664BC /* Score.swift in Sources */,
 				4BE31B312613DB1700B664BC /* Constructor.swift in Sources */,

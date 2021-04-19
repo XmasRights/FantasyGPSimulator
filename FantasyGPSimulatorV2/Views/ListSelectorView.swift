@@ -11,6 +11,10 @@ struct ListSelectorView: View {
     let race: Race
     let score: Score
 
+    let teamFactory = TeamFactory(
+        drivers: Driver.allCases,
+        constructors: Constructor.allCases)
+
     init(race: Race) {
         self.race = race
         self.score = RaceScore(race: race)
@@ -37,7 +41,12 @@ struct ListSelectorView: View {
             }
 
             Section {
-                Text("Team")
+                NavigationLink(
+                    "Teams ",
+                    destination: TeamListView(
+                        teams: teamFactory.teams,
+                        score: score.score,
+                        price: race.cost))
             }
         }
         .listStyle(InsetGroupedListStyle())
