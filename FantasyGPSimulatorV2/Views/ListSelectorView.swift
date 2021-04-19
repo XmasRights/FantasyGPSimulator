@@ -9,11 +9,22 @@ import SwiftUI
 
 struct ListSelectorView: View {
     let race: Race
+    let score: Score
+
+    init(race: Race) {
+        self.race = race
+        self.score = RaceScore(race: race)
+    }
 
     var body: some View {
         List {
             Section {
-                Text("Drivers")
+                NavigationLink(
+                    "Drivers",
+                    destination: ScorableView(
+                        items: Driver.allCases,
+                        score: score.score,
+                        price: race.cost))
             }
 
             Section {
