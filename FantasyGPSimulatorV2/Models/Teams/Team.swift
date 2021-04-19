@@ -18,8 +18,8 @@ extension Team: Displayable {
         let c = constructors.map { $0.displayName }.sorted()
 
         return """
-            \(d.joined(separator: ","))
-            \(c.joined(separator: ","))
+            \(d.joined(separator: ", "))
+            \(c.joined(separator: ", "))
             """
     }
 
@@ -28,8 +28,8 @@ extension Team: Displayable {
         let c = constructors.map { $0.shortName }.sorted()
 
         return """
-            \(d.joined(separator: ","))
-            \(c.joined(separator: ","))
+            \(d.joined(separator: ", "))
+            \(c.joined(separator: ", "))
             """
 
     }
