@@ -8,7 +8,7 @@
 import Foundation
 
 struct Bahrain: Race {
-    let name = "Bahrain Grand Prix"
+    let location = Location.Bahrain
     let info: RaceInfo = _BahrainInfo()
     let result: RaceResult? = _BahrainResult()
 }

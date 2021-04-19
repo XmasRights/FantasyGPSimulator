@@ -8,7 +8,7 @@
 import Foundation
 
 struct Portugal: Race {
-    let name = "Portuguese Grand Prix"
+    let location = Location.Portugal
     let info: RaceInfo = _PortugalInfo()
     let result: RaceResult? = nil
 }

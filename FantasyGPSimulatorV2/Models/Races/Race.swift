@@ -8,10 +8,16 @@
 import Foundation
 
 protocol Race {
-    var name: String { get }
+    var location: Location { get }
 
     var info: RaceInfo { get }
     var result: RaceResult? { get }
+}
+
+extension Race {
+    var grandPrixName: String { location.grandPrixName }
+    var shortName: String { location.shortName }
+    var flag: String { location.flag }
 }
 
 enum Races {

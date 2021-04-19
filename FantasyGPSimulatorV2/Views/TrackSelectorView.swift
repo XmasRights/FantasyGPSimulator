@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct TrackSelectorView: View {
-    var raceNames: [String] {
-        Races.all.map { $0.name }
-    }
-
     var body: some View {
         List {
             Section {
@@ -24,7 +20,7 @@ struct TrackSelectorView: View {
             Section {
                 ForEach(0..<Races.all.count) { index in
                     NavigationLink(
-                        Races.all[index].name,
+                        "\(Races.all[index].flag) \(Races.all[index].grandPrixName)",
                         destination: ListSelectorView.race(Races.all[index]))
                 }
             }

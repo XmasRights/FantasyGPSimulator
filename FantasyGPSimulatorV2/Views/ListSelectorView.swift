@@ -10,7 +10,7 @@ import SwiftUI
 extension ListSelectorView {
     static func race(_ race: Race) -> ListSelectorView {
         .init(
-            title: race.name,
+            title: "\(race.flag) \(race.shortName)",
             info: race.info,
             score: RaceScore(race: race))
     }
@@ -34,6 +34,7 @@ struct ListSelectorView: View {
                 NavigationLink(
                     "Drivers",
                     destination: ScorableView(
+                        title: title,
                         items: Driver.allCases,
                         score: score?.score,
                         price: info.cost))
@@ -43,6 +44,7 @@ struct ListSelectorView: View {
                 NavigationLink(
                     "Constructor",
                     destination: ScorableView(
+                        title: title,
                         items: Constructor.allCases,
                         score: score?.score,
                         price: info.cost))

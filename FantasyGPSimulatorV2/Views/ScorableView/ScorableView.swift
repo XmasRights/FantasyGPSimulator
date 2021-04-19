@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ScorableView<T: Displayable>: View {
+    let title: String
     let items: [T]
     let score: ((T) -> Int)?
     let price: (T) -> Double
@@ -43,6 +44,7 @@ struct ScorableView<T: Displayable>: View {
                 .padding()
             }
         }
+        .navigationTitle(title)
     }
 }
 
@@ -91,6 +93,7 @@ struct ScorableView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ScorableView(
+                title: "Some Race",
                 items: items,
                 score: { _ in return 42 },
                 price: { _ in return 64.0 })
@@ -98,6 +101,7 @@ struct ScorableView_Previews: PreviewProvider {
                 .colorScheme(.light)
 
             ScorableView(
+                title: "Some Race",
                 items: items,
                 score: { _ in return 42 },
                 price: { _ in return 64.0 })
