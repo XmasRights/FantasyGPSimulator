@@ -8,13 +8,16 @@
 import Foundation
 
 class RaceScore: Score {
-    let race: Race
+    let info: RaceInfo
+    let result: RaceResult
 
     var driverCache = [Driver: Int]()
     var constructorCache = [Constructor: Int]()
 
-    init(race: Race) {
-        self.race = race
+    init?(race: Race) {
+        guard let result = race.result else { return nil }
+        self.info = race.info
+        self.result = result
     }
 
     func score(for constructor: Constructor) -> Int {
@@ -68,17 +71,17 @@ extension RaceScore {
 
 private extension RaceScore {
     func fastestLapPoints(driver: Driver) -> Int {
-        race.fastestLap == driver ? 1 : 0
+        result.fastestLap == driver ? 1 : 0
     }
 
     func fastestLapPoints(constructor: Constructor) -> Int {
-        let team = race.drivers(for: constructor)
+        let team = info.drivers(for: constructor)
         return team.map(fastestLapPoints).reduce(0, +)
     }
 
     func raceResultPoints(driver: Driver) -> Int {
         let points = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]
-        let finish = race.raceResult(for: driver)
+        let finish = result.raceResult(for: driver)
 
         switch finish {
             case .retired:
@@ -91,7 +94,7 @@ private extension RaceScore {
     }
 
     func raceResultPoints(constructor: Constructor) -> Int {
-        let team = race.drivers(for: constructor)
+        let team = info.drivers(for: constructor)
         return team.map(raceResultPoints).reduce(0, +)
     }
 
@@ -100,14 +103,14 @@ private extension RaceScore {
     }
 
     func gainedPositionPoints(constructor: Constructor) -> Int {
-        let team   = race.drivers(for: constructor)
+        let team   = info.drivers(for: constructor)
         let scores = team.map { gainedPositionPoints(driver: $0, gain: 1) }
         return scores.reduce(0, +)
     }
 
     private func gainedPositionPoints(driver: Driver, gain: Int) -> Int {
-        let start  = race.startingGrid(for: driver)
-        let finish = race.raceResult(for: driver)
+        let start  = result.startingGrid(for: driver)
+        let finish = result.raceResult(for: driver)
 
         switch (start, finish) {
             case (.p(let s), .p(let f)) where f < s:
@@ -119,7 +122,7 @@ private extension RaceScore {
     }
 
     func polePositionPoints(driver: Driver) -> Int {
-        let qualifying = race.qualifyingResult(for: driver)
+        let qualifying = result.qualifyingResult(for: driver)
 
         switch qualifying {
             case .p(let position):
@@ -131,10 +134,10 @@ private extension RaceScore {
     }
 
     func beatTeamMatePoints(driver: Driver) -> Int {
-        let teammate = race.teammate(of: driver)
+        let teammate = info.teammate(of: driver)
 
-        let myPosition    = race.qualifyingResult(for: driver)
-        let theirPosition = race.qualifyingResult(for: teammate)
+        let myPosition    = result.qualifyingResult(for: driver)
+        let theirPosition = result.qualifyingResult(for: teammate)
 
         switch (myPosition, theirPosition) {
             case (.p(let mine), .p(let theirs)):

@@ -7,10 +7,15 @@
 
 import Foundation
 
+
 struct EmiliaRomagna: Race {
     let name = "Emilia Romagna Grand Prix"
+    let info: RaceInfo = _EmiliaRomagnaInfo()
+    let result: RaceResult? = _EmiliaRomagnaResult()
+}
 
-    func qualifyingResult(for driver: Driver) -> RaceResult {
+private struct _EmiliaRomagnaResult: RaceResult {
+    func qualifyingResult(for driver: Driver) -> Position {
         switch driver {
             case .hamilton:   return .p(1)
             case .pérez:      return .p(2)
@@ -34,8 +39,8 @@ struct EmiliaRomagna: Race {
             case .tsunoda:    return .p(20)
         }
     }
-
-    func startingGrid(for driver: Driver) -> RaceResult {
+    
+    func startingGrid(for driver: Driver) -> Position {
         switch driver {
             case .hamilton:   return .p(1)
             case .pérez:      return .p(2)
@@ -59,8 +64,8 @@ struct EmiliaRomagna: Race {
             case .vettel:     return .p(20)
         }
     }
-
-    func raceResult(for driver: Driver) -> RaceResult {
+    
+    func raceResult(for driver: Driver) -> Position {
         switch driver {
             case .verstappen: return .p(1)
             case .hamilton:   return .p(2)
@@ -87,6 +92,9 @@ struct EmiliaRomagna: Race {
 
     var fastestLap: Driver { .hamilton }
 
+}
+
+private struct _EmiliaRomagnaInfo: RaceInfo {
     func cost(of driver: Driver) -> Double {
         switch driver {
             case .hamilton:   return 25.5
@@ -111,7 +119,7 @@ struct EmiliaRomagna: Race {
             case .russell:    return 5.5
         }
     }
-
+    
     func cost(of constructor: Constructor) -> Double {
         switch constructor {
             case .mercedes:    return 27.5

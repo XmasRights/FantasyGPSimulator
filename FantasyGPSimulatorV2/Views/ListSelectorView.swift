@@ -8,8 +8,9 @@
 import SwiftUI
 
 extension ListSelectorView {
-    static func race(_ race: Race) -> ListSelectorView {
-        .init(race: race, score: RaceScore(race: race))
+    static func race(_ race: Race) -> ListSelectorView? {
+        guard let score = RaceScore(race: race) else { return nil }
+        return .init(race: race, score: score)
     }
 
     static func  allSeason() -> ListSelectorView {
@@ -29,7 +30,7 @@ struct ListSelectorView: View {
                     destination: ScorableView(
                         items: Driver.allCases,
                         score: score.score,
-                        price: race.cost))
+                        price: race.info.cost))
             }
 
             Section {
@@ -38,7 +39,7 @@ struct ListSelectorView: View {
                     destination: ScorableView(
                         items: Constructor.allCases,
                         score: score.score,
-                        price: race.cost))
+                        price: race.info.cost))
             }
 
             Section {
@@ -47,7 +48,7 @@ struct ListSelectorView: View {
                     destination: TeamListView(
                         teams: TeamFactory.shared.teams,
                         score: score.score,
-                        price: race.cost))
+                        price: race.info.cost))
             }
         }
         .listStyle(InsetGroupedListStyle())

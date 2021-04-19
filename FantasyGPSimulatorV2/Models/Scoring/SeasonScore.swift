@@ -9,7 +9,7 @@ import Foundation
 
 struct SeasonScore: Score {
     let scoreArray: [Score] = {
-        Races.all.map(RaceScore.init)
+        Races.all.compactMap(RaceScore.init)
     }()
 
     func score(for driver: Driver) -> Int {

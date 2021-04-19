@@ -9,8 +9,12 @@ import Foundation
 
 struct Bahrain: Race {
     let name = "Bahrain Grand Prix"
+    let info: RaceInfo = _BahrainInfo()
+    let result: RaceResult? = _BahrainResult()
+}
 
-    func qualifyingResult(for driver: Driver) -> RaceResult {
+private struct _BahrainResult: RaceResult {
+    func qualifyingResult(for driver: Driver) -> Position {
         switch driver {
             case .verstappen: return .p(1)
             case .hamilton:   return .p(2)
@@ -35,7 +39,7 @@ struct Bahrain: Race {
         }
     }
 
-    func startingGrid(for driver: Driver) -> RaceResult {
+    func startingGrid(for driver: Driver) -> Position {
         switch driver {
             case .verstappen: return .p(1)
             case .hamilton:   return .p(2)
@@ -60,7 +64,7 @@ struct Bahrain: Race {
         }
     }
 
-    func raceResult(for driver: Driver) -> RaceResult {
+    func raceResult(for driver: Driver) -> Position {
         switch driver {
             case .hamilton:   return .p(1)
             case .verstappen: return .p(2)
@@ -86,7 +90,9 @@ struct Bahrain: Race {
     }
 
     var fastestLap: Driver { .bottas }
+}
 
+private struct _BahrainInfo: RaceInfo {
     func cost(of driver: Driver) -> Double {
         switch driver {
             case .hamilton:   return 25.5
@@ -126,4 +132,5 @@ struct Bahrain: Race {
             case .williams:    return 4.5
         }
     }
+
 }
