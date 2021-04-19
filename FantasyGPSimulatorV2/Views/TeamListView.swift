@@ -28,15 +28,31 @@ struct TeamListView: View {
 
 private extension TeamListView {
     var entries: [Entry] {
-        teams.map {
+        let start = DispatchTime.now()
+
+        let filtered = teams
+            .filter { price($0) <= 75.0 && score($0) > 130 }
+
+        let makeEntires = filtered.map {
             Entry(
                 name: $0.shortName,
                 score: score($0),
                 price: price($0))
         }
-        .filter { $0.price <= 75.0 && $0.score > 130 }
-        .sorted()
-        .reversed()
+
+        let sorted = makeEntires.sorted()
+
+        let end = DispatchTime.now()
+
+        print("Team Generation took \(timeBetween(start, end))")
+
+        return sorted.reversed()
+    }
+
+    func timeBetween(_ start: DispatchTime, _ end: DispatchTime) -> String {
+        let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
+        let timeInterval = Double(nanoTime) / 1_000_000_000
+        return "\(timeInterval) seconds"
     }
 }
 
