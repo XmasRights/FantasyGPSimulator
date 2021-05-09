@@ -9,7 +9,7 @@ import XCTest
 @testable import FantasyGPSimulatorV2
 
 class EmiliaRomagnaTests: XCTestCase {
-    private let s = RaceScore(race: EmiliaRomagna())
+    private let s = RaceScore(race: EmiliaRomagna())!
 
     func testDriverScores() {
         XCTAssertEqual(s.score(for: .alonso), 9)
