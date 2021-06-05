@@ -13,6 +13,7 @@ enum Location {
     case Portugal
     case Spain
     case Monaco
+    case Azerbaijan
 }
 
 extension Location {
@@ -23,6 +24,7 @@ extension Location {
             case .Portugal:      return "Portugese Grand Prix"
             case .Spain:         return "Spanish Grand Prix"
             case .Monaco:        return "Monaco Grand Prix"
+            case .Azerbaijan:    return "Azerbaijan Grand Prix"
 
         }
     }
@@ -34,6 +36,7 @@ extension Location {
             case .Portugal:      return "Portugal"
             case .Spain:         return "Spain"
             case .Monaco:        return "Monaco"
+            case .Azerbaijan:    return "Azerbaijan"
 
         }
     }
@@ -45,6 +48,7 @@ extension Location {
             case .Portugal:      return "🇵🇹"
             case .Spain:         return "🇪🇸"
             case .Monaco:        return "🇲🇨"
+            case .Azerbaijan:    return "🇦🇿"
         }
     }
 }
