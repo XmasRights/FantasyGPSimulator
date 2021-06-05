@@ -90,7 +90,6 @@ private struct _EmiliaRomagnaResult: RaceResult {
     }
 
     var fastestLap: Driver { .hamilton }
-
 }
 
 private struct _EmiliaRomagnaInfo: RaceInfo {
