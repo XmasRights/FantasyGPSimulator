@@ -24,6 +24,9 @@ enum Races {
     static let all: [Race] = [
         Bahrain(),
         EmiliaRomagna(),
-        Portugal()
+        Portugal(),
+        Spain(),
+        Monaco(),
+        Azerbaijan()
     ]
 }

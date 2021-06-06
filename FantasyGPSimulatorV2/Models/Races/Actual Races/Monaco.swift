@@ -16,51 +16,51 @@ struct Monaco: Race {
 private struct MonacoResult: RaceResult {
     func qualifyingResult(for driver: Driver) -> Position {
         switch driver {
-            case .leclerc: return .p(1)
-            case .verstappen: return .p(2)
-            case .bottas: return .p(3)
-            case .sainz: return .p(4)
-            case .norris: return .p(5)
-            case .gasly: return .p(6)
-            case .hamilton: return .p(7)
-            case .vettel: return .p(8)
-            case .pérez: return .p(9)
-            case .giovinazzi: return .p(10)
-            case .ocon: return .p(11)
-            case .ricciardo: return .p(12)
-            case .stroll: return .p(13)
-            case .räikkönen: return .p(14)
-            case .russell: return .p(15)
-            case .tsunoda: return .p(16)
-            case .alonso: return .p(17)
-            case .latifi: return .p(18)
-            case .mazepin: return .p(19)
-            case .schumacher: return .retired
+            case .verstappen: return .p(1)
+            case .bottas: return .p(2)
+            case .sainz: return .p(3)
+            case .norris: return .p(4)
+            case .gasly: return .p(5)
+            case .hamilton: return .p(6)
+            case .vettel: return .p(7)
+            case .pérez: return .p(8)
+            case .giovinazzi: return .p(9)
+            case .ocon: return .p(10)
+            case .ricciardo: return .p(11)
+            case .stroll: return .p(12)
+            case .räikkönen: return .p(13)
+            case .russell: return .p(14)
+            case .tsunoda: return .p(15)
+            case .alonso: return .p(16)
+            case .latifi: return .p(17)
+            case .mazepin: return .p(18)
+            case .schumacher: return .p(19)
+            case .leclerc: return .retired
         }
     }
     
     func startingGrid(for driver: Driver) -> Position {
         switch driver {
-            case .leclerc: return .p(1)
-            case .verstappen: return .p(2)
-            case .bottas: return .p(3)
-            case .sainz: return .p(4)
-            case .norris: return .p(5)
-            case .gasly: return .p(6)
-            case .hamilton: return .p(7)
-            case .vettel: return .p(8)
-            case .pérez: return .p(9)
-            case .giovinazzi: return .p(10)
-            case .ocon: return .p(11)
-            case .ricciardo: return .p(12)
-            case .stroll: return .p(13)
-            case .räikkönen: return .p(14)
-            case .russell: return .p(15)
-            case .tsunoda: return .p(16)
-            case .alonso: return .p(17)
-            case .latifi: return .p(18)
-            case .mazepin: return .p(19)
-            case .schumacher: return .p(20)
+            case .verstappen: return .p(1)
+            case .bottas: return .p(2)
+            case .sainz: return .p(3)
+            case .norris: return .p(4)
+            case .gasly: return .p(5)
+            case .hamilton: return .p(6)
+            case .vettel: return .p(7)
+            case .pérez: return .p(8)
+            case .giovinazzi: return .p(11)
+            case .ocon: return .p(10)
+            case .ricciardo: return .p(11)
+            case .stroll: return .p(12)
+            case .räikkönen: return .p(13)
+            case .russell: return .p(14)
+            case .tsunoda: return .p(15)
+            case .alonso: return .p(16)
+            case .latifi: return .p(17)
+            case .mazepin: return .p(18)
+            case .schumacher: return .p(19)
+            case .leclerc: return .retired
         }
     }
     
@@ -81,11 +81,11 @@ private struct MonacoResult: RaceResult {
             case .alonso: return .p(13)
             case .russell: return .p(14)
             case .latifi: return .p(15)
-            case .tsunoda: return .p(16)
+            case .tsunoda: return .p(14)
             case .mazepin: return .p(17)
             case .schumacher: return .p(18)
-            case .bottas: return .p(19)
-            case .leclerc: return .p(20)
+            case .bottas: return .retired
+            case .leclerc: return .retired
         }
     }
 

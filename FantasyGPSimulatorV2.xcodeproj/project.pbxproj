@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B3EACD6266C351800750E57 /* PortugalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3EACD5266C351800750E57 /* PortugalTests.swift */; };
+		4B7C9289266C49C900FD7CCF /* SpainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C9288266C49C900FD7CCF /* SpainTests.swift */; };
+		4B7C928B266C4AF200FD7CCF /* MonacoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C928A266C4AF200FD7CCF /* MonacoTests.swift */; };
 		4B7C9EA5266C422F00D13D39 /* Spain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C9EA4266C422F00D13D39 /* Spain.swift */; };
 		4B7C9EA7266C44CE00D13D39 /* Monaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C9EA6266C44CE00D13D39 /* Monaco.swift */; };
 		4B7C9EA9266C469B00D13D39 /* Azerbaijan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C9EA8266C469B00D13D39 /* Azerbaijan.swift */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		4B3EACD5266C351800750E57 /* PortugalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortugalTests.swift; sourceTree = "<group>"; };
+		4B7C9288266C49C900FD7CCF /* SpainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpainTests.swift; sourceTree = "<group>"; };
+		4B7C928A266C4AF200FD7CCF /* MonacoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonacoTests.swift; sourceTree = "<group>"; };
 		4B7C9EA4266C422F00D13D39 /* Spain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spain.swift; sourceTree = "<group>"; };
 		4B7C9EA6266C44CE00D13D39 /* Monaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monaco.swift; sourceTree = "<group>"; };
 		4B7C9EA8266C469B00D13D39 /* Azerbaijan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Azerbaijan.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				4BE31B5B26149BF300B664BC /* BahrainTests.swift */,
 				4BF7E106262C83FA00A255BA /* EmiliaRomagnaTests.swift */,
 				4B3EACD5266C351800750E57 /* PortugalTests.swift */,
+				4B7C9288266C49C900FD7CCF /* SpainTests.swift */,
+				4B7C928A266C4AF200FD7CCF /* MonacoTests.swift */,
 			);
 			path = FantasyGPSimulatorV2Tests;
 			sourceTree = "<group>";
@@ -390,9 +396,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B7C928B266C4AF200FD7CCF /* MonacoTests.swift in Sources */,
 				4BF7E107262C83FA00A255BA /* EmiliaRomagnaTests.swift in Sources */,
 				4BE31B5226149BD100B664BC /* FantasyGPSimulatorV2Tests.swift in Sources */,
 				4BE31B5C26149BF300B664BC /* BahrainTests.swift in Sources */,
+				4B7C9289266C49C900FD7CCF /* SpainTests.swift in Sources */,
 				4B3EACD6266C351800750E57 /* PortugalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
