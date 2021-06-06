@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4B3EACD6266C351800750E57 /* PortugalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3EACD5266C351800750E57 /* PortugalTests.swift */; };
 		4B7C9EA5266C422F00D13D39 /* Spain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C9EA4266C422F00D13D39 /* Spain.swift */; };
+		4B7C9EA7266C44CE00D13D39 /* Monaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C9EA6266C44CE00D13D39 /* Monaco.swift */; };
+		4B7C9EA9266C469B00D13D39 /* Azerbaijan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7C9EA8266C469B00D13D39 /* Azerbaijan.swift */; };
 		4BB91FED262DE67700D05861 /* RaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB91FEC262DE67700D05861 /* RaceInfo.swift */; };
 		4BB91FF3262DE6B300D05861 /* RaceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB91FF2262DE6B300D05861 /* RaceResult.swift */; };
 		4BB91FF7262DE9F800D05861 /* Portugal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB91FF6262DE9F800D05861 /* Portugal.swift */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		4B3EACD5266C351800750E57 /* PortugalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortugalTests.swift; sourceTree = "<group>"; };
 		4B7C9EA4266C422F00D13D39 /* Spain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spain.swift; sourceTree = "<group>"; };
+		4B7C9EA6266C44CE00D13D39 /* Monaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monaco.swift; sourceTree = "<group>"; };
+		4B7C9EA8266C469B00D13D39 /* Azerbaijan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Azerbaijan.swift; sourceTree = "<group>"; };
 		4BB91FEC262DE67700D05861 /* RaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceInfo.swift; sourceTree = "<group>"; };
 		4BB91FF2262DE6B300D05861 /* RaceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResult.swift; sourceTree = "<group>"; };
 		4BB91FF6262DE9F800D05861 /* Portugal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portugal.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				4BF7E102262C83D800A255BA /* EmiliaRomagna.swift */,
 				4BB91FF6262DE9F800D05861 /* Portugal.swift */,
 				4B7C9EA4266C422F00D13D39 /* Spain.swift */,
+				4B7C9EA6266C44CE00D13D39 /* Monaco.swift */,
+				4B7C9EA8266C469B00D13D39 /* Azerbaijan.swift */,
 			);
 			path = "Actual Races";
 			sourceTree = "<group>";
@@ -360,10 +366,12 @@
 				4BF7E115262C972900A255BA /* RaceScore.swift in Sources */,
 				4BE31B662614A94500B664BC /* UniquePermutations.swift in Sources */,
 				4BF7E111262C940600A255BA /* TrackSelectorView.swift in Sources */,
+				4B7C9EA9266C469B00D13D39 /* Azerbaijan.swift in Sources */,
 				4BD78248262DA89A005BAE17 /* TeamListView.swift in Sources */,
 				4BB91FFF262DF34C00D05861 /* Location.swift in Sources */,
 				4BE31B162613D58000B664BC /* ContentView.swift in Sources */,
 				4BB91FF3262DE6B300D05861 /* RaceResult.swift in Sources */,
+				4B7C9EA7266C44CE00D13D39 /* Monaco.swift in Sources */,
 				4BE31B392613E4CC00B664BC /* Score.swift in Sources */,
 				4BE31B312613DB1700B664BC /* Constructor.swift in Sources */,
 				4BE31B6A2614A97600B664BC /* TeamFactory.swift in Sources */,
