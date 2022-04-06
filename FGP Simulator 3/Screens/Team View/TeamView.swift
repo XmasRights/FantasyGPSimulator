@@ -9,14 +9,33 @@ import SwiftUI
 
 struct TeamView: View {
     let teams: TeamRequest
-    
-    var body: some View {
-        
-        Text("L")
-        
+
+    @State private var sortBy = SortBy.points
+
+    private var content: [Team] {
+        switch sortBy {
+            case .price:
+                return teams.byPrice
+
+            case .points:
+                return teams.byPoints
+
+            case .value:
+                return teams.byValue
+        }
     }
-    
-    
+
+    var body: some View {
+        List {
+            ForEach(content) { team in
+                HStack {
+                    Text(team.description)
+                    Spacer()
+                    Text("\(team.points ?? 0)")
+                }
+            }
+        }
+    }
 }
 
 //struct TeamView_Previews: PreviewProvider {

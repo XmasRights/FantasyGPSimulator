@@ -11,14 +11,11 @@ struct RaceView: View {
     let race: Race
 
     @State private var sortBy = SortBy.points
+    @State var bestTeamRequest: TeamRequest?
     
     var body: some View {
         List {
-            
-            NavigationLink(
-                "Best Teams",
-                destination: Text("Hello world") // TeamView(race: race)
-            )
+            bestTeamButton
             
             Section(header: Text("Drivers")) {
                 ScorableList(
@@ -37,9 +34,25 @@ struct RaceView: View {
         .animation(.default, value: sortBy)
         .sortByToolbar($sortBy)
         .task {
-            print("Start")
-            let request = await TeamDataLoader.shared.loadTeams(from: race)
-            print("Done... \(request.byPoints.count)")
+            self.bestTeamRequest = await TeamDataLoader.shared.loadTeams(from: race)
+        }
+    }
+    
+    var bestTeamButton: some View {
+        VStack {
+            if let teams = bestTeamRequest {
+                NavigationLink(
+                    "Best Teams",
+                    destination: TeamView(teams: teams)
+                )
+            } else {
+                HStack {
+                    Text("Loading...")
+                    Spacer()
+                    ProgressView()
+                }
+            }
+            
         }
     }
 }
