@@ -1,0 +1,741 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B0639D827F9E79F008756B5 /* Scorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0639D727F9E79F008756B5 /* Scorable.swift */; };
+		4B0639DB27FA450F008756B5 /* ScorableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0639DA27FA450F008756B5 /* ScorableList.swift */; };
+		4B7DDA3527E1571100CB570B /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DDA3427E1571100CB570B /* TeamView.swift */; };
+		4B8BA6DA27E137FF00025A67 /* RaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6D927E137FF00025A67 /* RaceListView.swift */; };
+		4B8BA6DE27E13A5000025A67 /* FGPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6DD27E13A5000025A67 /* FGPData.swift */; };
+		4B8BA6E127E13D2800025A67 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6E027E13D2800025A67 /* Driver.swift */; };
+		4B8BA6E327E13D4300025A67 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6E227E13D4300025A67 /* Constructor.swift */; };
+		4B8BA6E527E13D6700025A67 /* RaceCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6E427E13D6700025A67 /* RaceCalendar.swift */; };
+		4B8BA6EB27E13DA700025A67 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6EA27E13DA700025A67 /* Race.swift */; };
+		4B8BA6EE27E13E9800025A67 /* Bahrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6ED27E13E9800025A67 /* Bahrain.swift */; };
+		4B8BA6F127E13F4C00025A67 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 4B8BA6F027E13F4C00025A67 /* Algorithms */; };
+		4B8BA6F327E13F7D00025A67 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F227E13F7D00025A67 /* RaceView.swift */; };
+		4B8BA6F527E1422300025A67 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F427E1422300025A67 /* ListCell.swift */; };
+		4B8BA6F727E1445F00025A67 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F627E1445F00025A67 /* Team.swift */; };
+		4BB562C327E760BD008D214B /* Saudi Arabia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB562C227E760BD008D214B /* Saudi Arabia.swift */; };
+		4BB562C827E76368008D214B /* SortBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB562C727E76367008D214B /* SortBy.swift */; };
+		4BCC3F8727DEA4A200237B0B /* FGP_Simulator_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC3F8627DEA4A200237B0B /* FGP_Simulator_3App.swift */; };
+		4BCC3F8927DEA4A200237B0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC3F8827DEA4A200237B0B /* ContentView.swift */; };
+		4BCC3F8B27DEA4A300237B0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCC3F8A27DEA4A300237B0B /* Assets.xcassets */; };
+		4BCC3F8E27DEA4A300237B0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCC3F8D27DEA4A300237B0B /* Preview Assets.xcassets */; };
+		4BCC3F9827DEA4A400237B0B /* FGP_Simulator_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC3F9727DEA4A400237B0B /* FGP_Simulator_3Tests.swift */; };
+		4BCC3FA227DEA4A400237B0B /* FGP_Simulator_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC3FA127DEA4A400237B0B /* FGP_Simulator_3UITests.swift */; };
+		4BCC3FA427DEA4A400237B0B /* FGP_Simulator_3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC3FA327DEA4A400237B0B /* FGP_Simulator_3UITestsLaunchTests.swift */; };
+		4BE9D53527FB851100A7D3E9 /* SortByToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9D53427FB851100A7D3E9 /* SortByToolbar.swift */; };
+		4BE9D53927FBA83D00A7D3E9 /* TeamDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9D53827FBA83D00A7D3E9 /* TeamDataLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BCC3F9427DEA4A400237B0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BCC3F7B27DEA4A200237B0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BCC3F8227DEA4A200237B0B;
+			remoteInfo = "FGP Simulator 3";
+		};
+		4BCC3F9E27DEA4A400237B0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BCC3F7B27DEA4A200237B0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BCC3F8227DEA4A200237B0B;
+			remoteInfo = "FGP Simulator 3";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B0639D727F9E79F008756B5 /* Scorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorable.swift; sourceTree = "<group>"; };
+		4B0639DA27FA450F008756B5 /* ScorableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorableList.swift; sourceTree = "<group>"; };
+		4B7DDA3427E1571100CB570B /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		4B8BA6D927E137FF00025A67 /* RaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListView.swift; sourceTree = "<group>"; };
+		4B8BA6DD27E13A5000025A67 /* FGPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGPData.swift; sourceTree = "<group>"; };
+		4B8BA6E027E13D2800025A67 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		4B8BA6E227E13D4300025A67 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
+		4B8BA6E427E13D6700025A67 /* RaceCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCalendar.swift; sourceTree = "<group>"; };
+		4B8BA6EA27E13DA700025A67 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		4B8BA6ED27E13E9800025A67 /* Bahrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bahrain.swift; sourceTree = "<group>"; };
+		4B8BA6F227E13F7D00025A67 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
+		4B8BA6F427E1422300025A67 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		4B8BA6F627E1445F00025A67 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		4BB562C227E760BD008D214B /* Saudi Arabia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Saudi Arabia.swift"; sourceTree = "<group>"; };
+		4BB562C727E76367008D214B /* SortBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBy.swift; sourceTree = "<group>"; };
+		4BCC3F8327DEA4A200237B0B /* FGP Simulator 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FGP Simulator 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCC3F8627DEA4A200237B0B /* FGP_Simulator_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGP_Simulator_3App.swift; sourceTree = "<group>"; };
+		4BCC3F8827DEA4A200237B0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4BCC3F8A27DEA4A300237B0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BCC3F8D27DEA4A300237B0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4BCC3F9327DEA4A400237B0B /* FGP Simulator 3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FGP Simulator 3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCC3F9727DEA4A400237B0B /* FGP_Simulator_3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGP_Simulator_3Tests.swift; sourceTree = "<group>"; };
+		4BCC3F9D27DEA4A400237B0B /* FGP Simulator 3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FGP Simulator 3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCC3FA127DEA4A400237B0B /* FGP_Simulator_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGP_Simulator_3UITests.swift; sourceTree = "<group>"; };
+		4BCC3FA327DEA4A400237B0B /* FGP_Simulator_3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGP_Simulator_3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4BE9D53427FB851100A7D3E9 /* SortByToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByToolbar.swift; sourceTree = "<group>"; };
+		4BE9D53827FBA83D00A7D3E9 /* TeamDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataLoader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BCC3F8027DEA4A200237B0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B8BA6F127E13F4C00025A67 /* Algorithms in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCC3F9027DEA4A400237B0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCC3F9A27DEA4A400237B0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B0639D927FA44FF008756B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BA6F427E1422300025A67 /* ListCell.swift */,
+				4B0639DA27FA450F008756B5 /* ScorableList.swift */,
+				4BB562C727E76367008D214B /* SortBy.swift */,
+				4BE9D53427FB851100A7D3E9 /* SortByToolbar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B8BA6D827E137EA00025A67 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4B0639D927FA44FF008756B5 /* Views */,
+				4BB562C427E76322008D214B /* List of Races */,
+				4BB562C527E76329008D214B /* Race View */,
+				4BB562C627E76332008D214B /* Team View */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4B8BA6DF27E13D1700025A67 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BA6E027E13D2800025A67 /* Driver.swift */,
+				4B8BA6E227E13D4300025A67 /* Constructor.swift */,
+				4B8BA6E427E13D6700025A67 /* RaceCalendar.swift */,
+				4B8BA6EA27E13DA700025A67 /* Race.swift */,
+				4B8BA6F627E1445F00025A67 /* Team.swift */,
+				4B0639D727F9E79F008756B5 /* Scorable.swift */,
+				4BE9D53827FBA83D00A7D3E9 /* TeamDataLoader.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		4B8BA6EC27E13E8200025A67 /* Season */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BA6ED27E13E9800025A67 /* Bahrain.swift */,
+				4BB562C227E760BD008D214B /* Saudi Arabia.swift */,
+			);
+			path = Season;
+			sourceTree = "<group>";
+		};
+		4BB562C427E76322008D214B /* List of Races */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BA6D927E137FF00025A67 /* RaceListView.swift */,
+			);
+			path = "List of Races";
+			sourceTree = "<group>";
+		};
+		4BB562C527E76329008D214B /* Race View */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BA6F227E13F7D00025A67 /* RaceView.swift */,
+			);
+			path = "Race View";
+			sourceTree = "<group>";
+		};
+		4BB562C627E76332008D214B /* Team View */ = {
+			isa = PBXGroup;
+			children = (
+				4B7DDA3427E1571100CB570B /* TeamView.swift */,
+			);
+			path = "Team View";
+			sourceTree = "<group>";
+		};
+		4BCC3F7A27DEA4A200237B0B = {
+			isa = PBXGroup;
+			children = (
+				4BCC3F8527DEA4A200237B0B /* FGP Simulator 3 */,
+				4BCC3F9627DEA4A400237B0B /* FGP Simulator 3Tests */,
+				4BCC3FA027DEA4A400237B0B /* FGP Simulator 3UITests */,
+				4BCC3F8427DEA4A200237B0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BCC3F8427DEA4A200237B0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BCC3F8327DEA4A200237B0B /* FGP Simulator 3.app */,
+				4BCC3F9327DEA4A400237B0B /* FGP Simulator 3Tests.xctest */,
+				4BCC3F9D27DEA4A400237B0B /* FGP Simulator 3UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BCC3F8527DEA4A200237B0B /* FGP Simulator 3 */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BA6EC27E13E8200025A67 /* Season */,
+				4B8BA6DF27E13D1700025A67 /* Data Models */,
+				4B8BA6D827E137EA00025A67 /* Screens */,
+				4BCC3F8627DEA4A200237B0B /* FGP_Simulator_3App.swift */,
+				4BCC3F8827DEA4A200237B0B /* ContentView.swift */,
+				4BCC3F8A27DEA4A300237B0B /* Assets.xcassets */,
+				4BCC3F8C27DEA4A300237B0B /* Preview Content */,
+				4B8BA6DD27E13A5000025A67 /* FGPData.swift */,
+			);
+			path = "FGP Simulator 3";
+			sourceTree = "<group>";
+		};
+		4BCC3F8C27DEA4A300237B0B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4BCC3F8D27DEA4A300237B0B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4BCC3F9627DEA4A400237B0B /* FGP Simulator 3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4BCC3F9727DEA4A400237B0B /* FGP_Simulator_3Tests.swift */,
+			);
+			path = "FGP Simulator 3Tests";
+			sourceTree = "<group>";
+		};
+		4BCC3FA027DEA4A400237B0B /* FGP Simulator 3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				4BCC3FA127DEA4A400237B0B /* FGP_Simulator_3UITests.swift */,
+				4BCC3FA327DEA4A400237B0B /* FGP_Simulator_3UITestsLaunchTests.swift */,
+			);
+			path = "FGP Simulator 3UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BCC3F8227DEA4A200237B0B /* FGP Simulator 3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCC3FA727DEA4A400237B0B /* Build configuration list for PBXNativeTarget "FGP Simulator 3" */;
+			buildPhases = (
+				4BCC3F7F27DEA4A200237B0B /* Sources */,
+				4BCC3F8027DEA4A200237B0B /* Frameworks */,
+				4BCC3F8127DEA4A200237B0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FGP Simulator 3";
+			packageProductDependencies = (
+				4B8BA6F027E13F4C00025A67 /* Algorithms */,
+			);
+			productName = "FGP Simulator 3";
+			productReference = 4BCC3F8327DEA4A200237B0B /* FGP Simulator 3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BCC3F9227DEA4A400237B0B /* FGP Simulator 3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCC3FAA27DEA4A400237B0B /* Build configuration list for PBXNativeTarget "FGP Simulator 3Tests" */;
+			buildPhases = (
+				4BCC3F8F27DEA4A400237B0B /* Sources */,
+				4BCC3F9027DEA4A400237B0B /* Frameworks */,
+				4BCC3F9127DEA4A400237B0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BCC3F9527DEA4A400237B0B /* PBXTargetDependency */,
+			);
+			name = "FGP Simulator 3Tests";
+			productName = "FGP Simulator 3Tests";
+			productReference = 4BCC3F9327DEA4A400237B0B /* FGP Simulator 3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4BCC3F9C27DEA4A400237B0B /* FGP Simulator 3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCC3FAD27DEA4A400237B0B /* Build configuration list for PBXNativeTarget "FGP Simulator 3UITests" */;
+			buildPhases = (
+				4BCC3F9927DEA4A400237B0B /* Sources */,
+				4BCC3F9A27DEA4A400237B0B /* Frameworks */,
+				4BCC3F9B27DEA4A400237B0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BCC3F9F27DEA4A400237B0B /* PBXTargetDependency */,
+			);
+			name = "FGP Simulator 3UITests";
+			productName = "FGP Simulator 3UITests";
+			productReference = 4BCC3F9D27DEA4A400237B0B /* FGP Simulator 3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BCC3F7B27DEA4A200237B0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					4BCC3F8227DEA4A200237B0B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4BCC3F9227DEA4A400237B0B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4BCC3F8227DEA4A200237B0B;
+					};
+					4BCC3F9C27DEA4A400237B0B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4BCC3F8227DEA4A200237B0B;
+					};
+				};
+			};
+			buildConfigurationList = 4BCC3F7E27DEA4A200237B0B /* Build configuration list for PBXProject "FGP Simulator 3" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BCC3F7A27DEA4A200237B0B;
+			packageReferences = (
+				4B8BA6EF27E13F4C00025A67 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
+			productRefGroup = 4BCC3F8427DEA4A200237B0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BCC3F8227DEA4A200237B0B /* FGP Simulator 3 */,
+				4BCC3F9227DEA4A400237B0B /* FGP Simulator 3Tests */,
+				4BCC3F9C27DEA4A400237B0B /* FGP Simulator 3UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BCC3F8127DEA4A200237B0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCC3F8E27DEA4A300237B0B /* Preview Assets.xcassets in Resources */,
+				4BCC3F8B27DEA4A300237B0B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCC3F9127DEA4A400237B0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCC3F9B27DEA4A400237B0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BCC3F7F27DEA4A200237B0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0639D827F9E79F008756B5 /* Scorable.swift in Sources */,
+				4B8BA6DE27E13A5000025A67 /* FGPData.swift in Sources */,
+				4B7DDA3527E1571100CB570B /* TeamView.swift in Sources */,
+				4BB562C327E760BD008D214B /* Saudi Arabia.swift in Sources */,
+				4BE9D53927FBA83D00A7D3E9 /* TeamDataLoader.swift in Sources */,
+				4B8BA6E527E13D6700025A67 /* RaceCalendar.swift in Sources */,
+				4B8BA6EB27E13DA700025A67 /* Race.swift in Sources */,
+				4B8BA6F527E1422300025A67 /* ListCell.swift in Sources */,
+				4B8BA6DA27E137FF00025A67 /* RaceListView.swift in Sources */,
+				4B8BA6E127E13D2800025A67 /* Driver.swift in Sources */,
+				4B8BA6F327E13F7D00025A67 /* RaceView.swift in Sources */,
+				4B8BA6E327E13D4300025A67 /* Constructor.swift in Sources */,
+				4BB562C827E76368008D214B /* SortBy.swift in Sources */,
+				4BE9D53527FB851100A7D3E9 /* SortByToolbar.swift in Sources */,
+				4BCC3F8927DEA4A200237B0B /* ContentView.swift in Sources */,
+				4B8BA6F727E1445F00025A67 /* Team.swift in Sources */,
+				4B8BA6EE27E13E9800025A67 /* Bahrain.swift in Sources */,
+				4BCC3F8727DEA4A200237B0B /* FGP_Simulator_3App.swift in Sources */,
+				4B0639DB27FA450F008756B5 /* ScorableList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCC3F8F27DEA4A400237B0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCC3F9827DEA4A400237B0B /* FGP_Simulator_3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCC3F9927DEA4A400237B0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCC3FA227DEA4A400237B0B /* FGP_Simulator_3UITests.swift in Sources */,
+				4BCC3FA427DEA4A400237B0B /* FGP_Simulator_3UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BCC3F9527DEA4A400237B0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BCC3F8227DEA4A200237B0B /* FGP Simulator 3 */;
+			targetProxy = 4BCC3F9427DEA4A400237B0B /* PBXContainerItemProxy */;
+		};
+		4BCC3F9F27DEA4A400237B0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BCC3F8227DEA4A200237B0B /* FGP Simulator 3 */;
+			targetProxy = 4BCC3F9E27DEA4A400237B0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4BCC3FA527DEA4A400237B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4BCC3FA627DEA4A400237B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BCC3FA827DEA4A400237B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FGP Simulator 3/Preview Content\"";
+				DEVELOPMENT_TEAM = LH8455G983;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherfonseka.FGP-Simulator-3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BCC3FA927DEA4A400237B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FGP Simulator 3/Preview Content\"";
+				DEVELOPMENT_TEAM = LH8455G983;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherfonseka.FGP-Simulator-3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4BCC3FAB27DEA4A400237B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LH8455G983;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherfonseka.FGP-Simulator-3Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FGP Simulator 3.app/FGP Simulator 3";
+			};
+			name = Debug;
+		};
+		4BCC3FAC27DEA4A400237B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LH8455G983;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherfonseka.FGP-Simulator-3Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FGP Simulator 3.app/FGP Simulator 3";
+			};
+			name = Release;
+		};
+		4BCC3FAE27DEA4A400237B0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LH8455G983;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherfonseka.FGP-Simulator-3UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FGP Simulator 3";
+			};
+			name = Debug;
+		};
+		4BCC3FAF27DEA4A400237B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LH8455G983;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherfonseka.FGP-Simulator-3UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FGP Simulator 3";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BCC3F7E27DEA4A200237B0B /* Build configuration list for PBXProject "FGP Simulator 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCC3FA527DEA4A400237B0B /* Debug */,
+				4BCC3FA627DEA4A400237B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCC3FA727DEA4A400237B0B /* Build configuration list for PBXNativeTarget "FGP Simulator 3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCC3FA827DEA4A400237B0B /* Debug */,
+				4BCC3FA927DEA4A400237B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCC3FAA27DEA4A400237B0B /* Build configuration list for PBXNativeTarget "FGP Simulator 3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCC3FAB27DEA4A400237B0B /* Debug */,
+				4BCC3FAC27DEA4A400237B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCC3FAD27DEA4A400237B0B /* Build configuration list for PBXNativeTarget "FGP Simulator 3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCC3FAE27DEA4A400237B0B /* Debug */,
+				4BCC3FAF27DEA4A400237B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B8BA6EF27E13F4C00025A67 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B8BA6F027E13F4C00025A67 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B8BA6EF27E13F4C00025A67 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4BCC3F7B27DEA4A200237B0B /* Project object */;
+}
