@@ -7,30 +7,29 @@
 
 import Foundation
 
-struct TeamRequest {
-    let byPrice: [Team]
-    let byPoints: [Team]
-    let byValue: [Team]
-}
-
 actor TeamDataLoader {
     
     static let shared = TeamDataLoader()
-    
+
+    static let budgetCap = 86.0
+    static let minPoints = 120
+
     private enum CacheEntry {
-        case inProgress(Task<TeamRequest, Never>)
-        case ready(TeamRequest)
+        case inProgress(Task<[Team], Never>)
+        case ready([Team])
     }
     
     private var cache: [String: CacheEntry] = [:]
     
-    func loadTeams(from race: Race) async -> TeamRequest {
+    func loadTeams(from race: Race) async -> [Team] {
         if let cached = cache[race.id] {
             switch cached {
                 case .ready(let team):
+                    print("ready from cache")
                     return team
                     
                 case .inProgress(let task):
+                    print("was loaded")
                     return await task.value
             }
         }
@@ -44,18 +43,12 @@ actor TeamDataLoader {
         return team
     }
     
-    private func _loadTeams(from race: Race) async -> TeamRequest {
-        
-        let allTeams = race.teams.map { $0 }
-        
-        async let price  = allTeams.sorted(by: { $0.price > $1.price })
-        async let points = allTeams.sorted(by: { ($0.points ?? 0) > ($1.points ?? 0) })
-        async let value  = allTeams.sorted(by: { ($0.value ?? 0) > ($1.value ?? 0) })
-        
-        return .init(
-            byPrice: await price,
-            byPoints: await points,
-            byValue: await value
-        )
+    private func _loadTeams(from race: Race) async -> [Team] {
+        let out = race.teams
+            .map { $0 }
+            .lazy
+            .filter { Self.minPoints < ($0.points ?? 0) }
+            .filter { $0.price <= Self.budgetCap }
+        return Array(out)
     }
 }

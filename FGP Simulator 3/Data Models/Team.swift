@@ -20,7 +20,25 @@ struct Team: Identifiable {
 }
 
 extension Team: Scorable {
-    
+
+    var shortName: String {
+        let d = drivers.map(\.shortName).joined(separator: ",")
+        let c = constructors.map(\.shortName).joined(separator: ",")
+        return """
+        \(d)
+        \(c)
+        """
+    }
+
+    var longName: String {
+        let d = drivers.map(\.longName).joined(separator: ",")
+        let c = constructors.map(\.longName).joined(separator: ",")
+        return """
+        \(d)
+        \(c)
+        """
+    }
+
     var price: Double {
         let d = drivers.map(\.price).reduce(0, +)
         let c = constructors.map(\.price).reduce(0, +)
@@ -31,18 +49,6 @@ extension Team: Scorable {
         let d = drivers.compactMap(\.points).reduce(0, +)
         let c = constructors.compactMap(\.points).reduce(0, +)
         return d + c
-    }
-}
-
-extension Team: CustomStringConvertible {
-    
-    var description: String {
-        let d = drivers.map(\.description).joined(separator: ",")
-        let c = constructors.map(\.description).joined(separator: ",")
-        return """
-        \(d)
-        \(c)
-        """
     }
 }
 

@@ -11,7 +11,7 @@ struct RaceView: View {
     let race: Race
 
     @State private var sortBy = SortBy.points
-    @State var bestTeamRequest: TeamRequest?
+    @State var teams: [Team]?
     
     var body: some View {
         List {
@@ -34,13 +34,13 @@ struct RaceView: View {
         .animation(.default, value: sortBy)
         .sortByToolbar($sortBy)
         .task {
-            self.bestTeamRequest = await TeamDataLoader.shared.loadTeams(from: race)
+            self.teams = await TeamDataLoader.shared.loadTeams(from: race)
         }
     }
     
     var bestTeamButton: some View {
         VStack {
-            if let teams = bestTeamRequest {
+            if let teams = teams {
                 NavigationLink(
                     "Best Teams",
                     destination: TeamView(teams: teams)

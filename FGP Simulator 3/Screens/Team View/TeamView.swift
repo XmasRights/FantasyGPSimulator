@@ -8,33 +8,27 @@
 import SwiftUI
 
 struct TeamView: View {
-    let teams: TeamRequest
+    let teams: [Team]
 
     @State private var sortBy = SortBy.points
 
-    private var content: [Team] {
-        switch sortBy {
-            case .price:
-                return teams.byPrice
-
-            case .points:
-                return teams.byPoints
-
-            case .value:
-                return teams.byValue
-        }
+    var content: [Team] {
+        teams.sorted(by: sortBy.sorter())
     }
 
     var body: some View {
         List {
-            ForEach(content) { team in
+            ForEach(content, id: \.id) { team in
                 HStack {
-                    Text(team.description)
+                    Text(team.shortName)
                     Spacer()
+
                     Text("\(team.points ?? 0)")
+
                 }
             }
         }
+        .sortByToolbar($sortBy)
     }
 }
 

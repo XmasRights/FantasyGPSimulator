@@ -132,12 +132,12 @@
 		4B8BA6DF27E13D1700025A67 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				4B8BA6E027E13D2800025A67 /* Driver.swift */,
 				4B8BA6E227E13D4300025A67 /* Constructor.swift */,
-				4B8BA6E427E13D6700025A67 /* RaceCalendar.swift */,
+				4B8BA6E027E13D2800025A67 /* Driver.swift */,
 				4B8BA6EA27E13DA700025A67 /* Race.swift */,
-				4B8BA6F627E1445F00025A67 /* Team.swift */,
+				4B8BA6E427E13D6700025A67 /* RaceCalendar.swift */,
 				4B0639D727F9E79F008756B5 /* Scorable.swift */,
+				4B8BA6F627E1445F00025A67 /* Team.swift */,
 				4BE9D53827FBA83D00A7D3E9 /* TeamDataLoader.swift */,
 			);
 			path = "Data Models";

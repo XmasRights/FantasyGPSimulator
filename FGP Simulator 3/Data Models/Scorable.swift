@@ -8,11 +8,12 @@
 import Foundation
 
 protocol Scorable {
-    
-    var description: String { get }
-    
+        
     var price: Double { get }
     var points: Int? { get }
+
+    var shortName: String { get }
+    var longName: String { get }
 }
 
 extension Scorable {

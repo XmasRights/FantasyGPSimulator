@@ -15,7 +15,7 @@ struct ScorableList<Content: Scorable & Identifiable>: View {
     
     var body: some View {
         ForEach(sortedContent, id: \.id) { item in
-            ListCell(name: item.description, value: value(for: item))
+            ListCell(name: item.longName, value: value(for: item))
         }
         .animation(.default, value: sortBy)
     }
