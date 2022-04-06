@@ -21,6 +21,7 @@
 		4B8BA6F327E13F7D00025A67 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F227E13F7D00025A67 /* RaceView.swift */; };
 		4B8BA6F527E1422300025A67 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F427E1422300025A67 /* ListCell.swift */; };
 		4B8BA6F727E1445F00025A67 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F627E1445F00025A67 /* Team.swift */; };
+		4B91FFF527FE4CC200BB8046 /* AllRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B91FFF427FE4CC200BB8046 /* AllRaces.swift */; };
 		4BB562C327E760BD008D214B /* Saudi Arabia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB562C227E760BD008D214B /* Saudi Arabia.swift */; };
 		4BB562C827E76368008D214B /* SortBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB562C727E76367008D214B /* SortBy.swift */; };
 		4BCC3F8727DEA4A200237B0B /* FGP_Simulator_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC3F8627DEA4A200237B0B /* FGP_Simulator_3App.swift */; };
@@ -65,6 +66,7 @@
 		4B8BA6F227E13F7D00025A67 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		4B8BA6F427E1422300025A67 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		4B8BA6F627E1445F00025A67 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		4B91FFF427FE4CC200BB8046 /* AllRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRaces.swift; sourceTree = "<group>"; };
 		4BB562C227E760BD008D214B /* Saudi Arabia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Saudi Arabia.swift"; sourceTree = "<group>"; };
 		4BB562C727E76367008D214B /* SortBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBy.swift; sourceTree = "<group>"; };
 		4BCC3F8327DEA4A200237B0B /* FGP Simulator 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FGP Simulator 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 		4B8BA6DF27E13D1700025A67 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				4B91FFF427FE4CC200BB8046 /* AllRaces.swift */,
 				4B8BA6E227E13D4300025A67 /* Constructor.swift */,
 				4B8BA6E027E13D2800025A67 /* Driver.swift */,
 				4B8BA6EA27E13DA700025A67 /* Race.swift */,
@@ -380,6 +383,7 @@
 				4B8BA6E527E13D6700025A67 /* RaceCalendar.swift in Sources */,
 				4B8BA6EB27E13DA700025A67 /* Race.swift in Sources */,
 				4B8BA6F527E1422300025A67 /* ListCell.swift in Sources */,
+				4B91FFF527FE4CC200BB8046 /* AllRaces.swift in Sources */,
 				4B8BA6DA27E137FF00025A67 /* RaceListView.swift in Sources */,
 				4B8BA6E127E13D2800025A67 /* Driver.swift in Sources */,
 				4B8BA6F327E13F7D00025A67 /* RaceView.swift in Sources */,

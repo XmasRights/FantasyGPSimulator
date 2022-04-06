@@ -10,7 +10,7 @@ import Foundation
 struct Driver: Identifiable, Hashable, Scorable {
     var id: Name { name }
     
-    let name: Name
+    var name: Name
     let price: Double
     let points: Int?
     
@@ -20,7 +20,7 @@ struct Driver: Identifiable, Hashable, Scorable {
 
 extension Driver {
     
-    enum Name: String {
+    enum Name: String, CaseIterable {
         case verstappen
         case perez
         case russell

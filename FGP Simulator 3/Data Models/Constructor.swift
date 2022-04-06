@@ -20,7 +20,7 @@ struct Constructor: Identifiable, Hashable, Scorable {
 
 extension Constructor {
     
-    enum Name: String {
+    enum Name: String, CaseIterable {
         case redBull
         case mercedes
         case ferrari

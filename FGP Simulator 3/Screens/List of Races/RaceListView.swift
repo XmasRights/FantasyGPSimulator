@@ -13,6 +13,14 @@ struct RaceListView: View {
     
     var body: some View {
         List {
+
+            Section {
+                NavigationLink(
+                    "All Races",
+                    destination: RaceView(race: AllRaces())
+                )
+            }
+
             ForEach(calendar.races) { race in
                 if let data = race.data {
                     NavigationLink(
