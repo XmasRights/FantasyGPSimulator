@@ -21,6 +21,10 @@ struct AllRaces: Race {
             .map { name in allRaces.compactMap { $0.constructor(name: name) }}
             .compactMap { $0.combine() }
     }
+
+    var pointThreshold: Int {
+        250
+    }
 }
 
 private extension AllRaces {

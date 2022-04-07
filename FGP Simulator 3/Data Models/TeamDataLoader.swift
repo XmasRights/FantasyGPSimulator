@@ -12,7 +12,6 @@ actor TeamDataLoader {
     static let shared = TeamDataLoader()
 
     static let budgetCap = 86.0
-    static let minPoints = 120
 
     private enum CacheEntry {
         case inProgress(Task<[Team], Never>)
@@ -47,7 +46,7 @@ actor TeamDataLoader {
         let out = race.teams
             .map { $0 }
             .lazy
-            .filter { Self.minPoints < ($0.points ?? 0) }
+            .filter { race.pointThreshold < ($0.points ?? 0) }
             .filter { $0.price <= Self.budgetCap }
         return Array(out)
     }

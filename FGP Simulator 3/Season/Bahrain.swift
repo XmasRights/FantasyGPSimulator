@@ -10,6 +10,8 @@ import Foundation
 struct Bahrain: Race {
     
     let id = "Bahrain"
+
+    var pointThreshold: Int { 170 }
     
     var drivers: [Driver] {
         [

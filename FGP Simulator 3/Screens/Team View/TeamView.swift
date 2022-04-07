@@ -23,8 +23,15 @@ struct TeamView: View {
                     Text(team.shortName)
                     Spacer()
 
-                    Text("\(team.points ?? 0)")
+                    if let price = team.price {
+                        Text("£\(String(format: "%.1f", price))m")
+                            .foregroundColor(.secondary)
+                    }
 
+                    if let points = team.points {
+                        Text("\(points)")
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
         }

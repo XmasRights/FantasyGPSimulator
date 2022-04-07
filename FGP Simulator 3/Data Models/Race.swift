@@ -12,4 +12,6 @@ protocol Race {
     
     var drivers: [Driver] { get }
     var constructors: [Constructor] { get }
+
+    var pointThreshold: Int { get }
 }

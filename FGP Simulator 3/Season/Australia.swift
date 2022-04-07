@@ -11,6 +11,8 @@ struct Australia: Race {
 
     let id = "Australia"
 
+    var pointThreshold: Int { 100 }
+
     var drivers: [Driver] {
         [
             .init(name: .verstappen, price: 24.5, points: nil),
