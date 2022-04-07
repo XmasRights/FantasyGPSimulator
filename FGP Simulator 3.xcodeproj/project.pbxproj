@@ -21,6 +21,7 @@
 		4B8BA6F327E13F7D00025A67 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F227E13F7D00025A67 /* RaceView.swift */; };
 		4B8BA6F527E1422300025A67 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F427E1422300025A67 /* ListCell.swift */; };
 		4B8BA6F727E1445F00025A67 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BA6F627E1445F00025A67 /* Team.swift */; };
+		4B8D0DF127FF859B00DF72CE /* Australia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8D0DF027FF859B00DF72CE /* Australia.swift */; };
 		4B91FFF527FE4CC200BB8046 /* AllRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B91FFF427FE4CC200BB8046 /* AllRaces.swift */; };
 		4BB562C327E760BD008D214B /* Saudi Arabia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB562C227E760BD008D214B /* Saudi Arabia.swift */; };
 		4BB562C827E76368008D214B /* SortBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB562C727E76367008D214B /* SortBy.swift */; };
@@ -66,6 +67,7 @@
 		4B8BA6F227E13F7D00025A67 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		4B8BA6F427E1422300025A67 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		4B8BA6F627E1445F00025A67 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		4B8D0DF027FF859B00DF72CE /* Australia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Australia.swift; sourceTree = "<group>"; };
 		4B91FFF427FE4CC200BB8046 /* AllRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRaces.swift; sourceTree = "<group>"; };
 		4BB562C227E760BD008D214B /* Saudi Arabia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Saudi Arabia.swift"; sourceTree = "<group>"; };
 		4BB562C727E76367008D214B /* SortBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBy.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				4B8BA6ED27E13E9800025A67 /* Bahrain.swift */,
 				4BB562C227E760BD008D214B /* Saudi Arabia.swift */,
+				4B8D0DF027FF859B00DF72CE /* Australia.swift */,
 			);
 			path = Season;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			files = (
 				4B0639D827F9E79F008756B5 /* Scorable.swift in Sources */,
 				4B8BA6DE27E13A5000025A67 /* FGPData.swift in Sources */,
+				4B8D0DF127FF859B00DF72CE /* Australia.swift in Sources */,
 				4B7DDA3527E1571100CB570B /* TeamView.swift in Sources */,
 				4BB562C327E760BD008D214B /* Saudi Arabia.swift in Sources */,
 				4BE9D53927FBA83D00A7D3E9 /* TeamDataLoader.swift in Sources */,

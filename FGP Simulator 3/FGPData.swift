@@ -12,7 +12,7 @@ final class FGPData: ObservableObject {
     let raceCalendar: RaceCalendar = .init(races: [
         .init(flag: "🇧🇭", name: "Bahrain Grand Prix", data: Bahrain()),
         .init(flag: "🇸🇦", name: "Saudi Arabian Grand Prix", data: SaudiArabia()),
-        .init(flag: "🇦🇺", name: "Australian Grand Prix", data: nil),
+        .init(flag: "🇦🇺", name: "Australian Grand Prix", data: Australia()),
         .init(flag: "🇮🇹", name: "Emilia Romagna Grand Prix", data: nil),
         .init(flag: "🇺🇸", name: "Miami Grand Prix", data: nil),
         .init(flag: "🇪🇸", name: "Spanish Grand Prix", data: nil),

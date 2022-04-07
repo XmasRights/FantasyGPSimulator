@@ -28,7 +28,8 @@ private extension AllRaces {
     var allRaces: [Race] {
         [
             Bahrain(),
-            SaudiArabia()
+            SaudiArabia(),
+            Australia()
         ]
     }
 }
