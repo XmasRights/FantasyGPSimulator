@@ -23,7 +23,7 @@ struct AllRaces: Race {
     }
 
     var pointThreshold: Int {
-        250
+        allRaces.count * 100
     }
 }
 
@@ -33,7 +33,8 @@ private extension AllRaces {
         [
             Bahrain(),
             SaudiArabia(),
-            Australia()
+            Australia(),
+            EmiliaRomagna()
         ]
     }
 }

@@ -13,7 +13,7 @@ final class FGPData: ObservableObject {
         .init(flag: "🇧🇭", name: "Bahrain Grand Prix", data: Bahrain()),
         .init(flag: "🇸🇦", name: "Saudi Arabian Grand Prix", data: SaudiArabia()),
         .init(flag: "🇦🇺", name: "Australian Grand Prix", data: Australia()),
-        .init(flag: "🇮🇹", name: "Emilia Romagna Grand Prix", data: nil),
+        .init(flag: "🇮🇹", name: "Emilia Romagna Grand Prix", data: EmiliaRomagna()),
         .init(flag: "🇺🇸", name: "Miami Grand Prix", data: nil),
         .init(flag: "🇪🇸", name: "Spanish Grand Prix", data: nil),
         .init(flag: "🇲🇨", name: "Monaco Grand Prix", data: nil),
