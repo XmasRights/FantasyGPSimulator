@@ -11,7 +11,7 @@ actor TeamDataLoader {
     
     static let shared = TeamDataLoader()
 
-    static let budgetCap = 86.0
+    static let budgetCap = 85.0
 
     private enum CacheEntry {
         case inProgress(Task<[Team], Never>)
