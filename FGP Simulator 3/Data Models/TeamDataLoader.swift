@@ -20,7 +20,7 @@ actor TeamDataLoader {
     
     private var cache: [String: CacheEntry] = [:]
     
-    func loadTeams(from race: Race) async -> [Team] {
+    func loadTeams(from race: Race) async -> [Team] { 
         if let cached = cache[race.id] {
             switch cached {
                 case .ready(let team):
